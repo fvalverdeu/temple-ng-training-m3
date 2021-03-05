@@ -9,4 +9,6 @@ WsIdstore: Work space of the project
 # Colaborators:
 
 1. Fernando Valverde feature/sprint0-fvu
-2. 
+
+2. Wilson Xicará `feature/sprint0-wil`
+
