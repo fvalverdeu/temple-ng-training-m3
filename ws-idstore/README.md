@@ -10,5 +10,5 @@ WsIdstore: Work space of the project
 
 1. Fernando Valverde `feature/sprint0-fvu`
 2. Wilson Xicará `feature/sprint0-wil`
-3. Pepe Flores Huañacari/sprint0-pfh
+3. Pepe Flores `Huañacari/sprint0-pfh`
 4. Joel Ronceros Cordova `feature/sprint0-jrc`
