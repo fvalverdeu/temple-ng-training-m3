@@ -9,5 +9,5 @@ WsIdstore: Work space of the project
 # Colaborators:
 
 1. Fernando Valverde feature/sprint0-fvu
-2. Pepe Flores Huañacari/sprint0-pfh
+2. Pepe Flores Huañacari feature/sprint0-pfh
 
