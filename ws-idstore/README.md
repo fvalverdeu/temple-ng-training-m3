@@ -12,5 +12,5 @@ WsIdstore: Work space of the project
 2. Wilson Xicará `feature/sprint0-wil`
 3. Pepe Flores `Huañacari/sprint0-pfh`
 4. Joel Ronceros Cordova `feature/sprint0-jrc`
-5. Anibal Ramirez `feature/sprint0-aarm`
-
+5. Jonathan Ramirez Nuñez `feature/sprint0-jrn`
+6. Anibal Ramirez `feature/sprint0-aarm`
