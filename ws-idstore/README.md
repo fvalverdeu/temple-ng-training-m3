@@ -17,3 +17,4 @@ WsIdstore: Work space of the project
 7. Horacio Castillejo Peña `feature/sprint0-hcp`
 6. Luis Cano `feature/sprint0-lcm`
 7. Amadin Ortega Alvarado `feature/sprint0-aoa`
+8.Gustavo Gonzales Fuentes `feature/sprint0-ggf`
