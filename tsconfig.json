@@ -16,8 +16,6 @@
         "dist/idstore-commons/idstore-commons",
         "dist/idstore-commons",
         "dist/idstore-commons/idstore-commons",
-        "dist/idstore-commons",
-        "dist/idstore-commons/idstore-commons",
         "dist/idstore-commons"
       ],
       "idstore-components": [
