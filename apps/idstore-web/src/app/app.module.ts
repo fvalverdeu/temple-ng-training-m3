@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { IsFooterModule } from 'libs/idstore-commons/src/lib/components/footer/footer.module';
-import { IsHeaderModule } from 'libs/idstore-commons/src/lib/components/header/header.module';
+
+import { IsFooterModule } from '@idstore/commons/components/footer/footer.module';
+import { IsHeaderModule } from '@idstore/commons/components/header/header.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
