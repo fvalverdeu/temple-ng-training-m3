@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CategoryComponent } from './category/category.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CategoryComponent],
+  exports: [CategoryComponent],
   imports: [
     CommonModule
   ]
 })
-export class ComponentsModule { }
+export class PortalComponentsModule { }

@@ -1,12 +1,15 @@
+import { PortalComponentsModule } from './components/components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PortalHttpModule } from './http/http.module';
 
 
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
+  exports: [
+    CommonModule,
+    PortalComponentsModule,
+    PortalHttpModule
   ]
 })
-export class CommonsModule { }
+export class PortalCommonsModule { }
