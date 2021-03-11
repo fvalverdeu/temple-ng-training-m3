@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { IsFooterModule } from '@idstore/commons/components/footer/footer.module';
+import { IsHeaderModule } from '@idstore/commons/components/header/header.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    IsHeaderModule,
+    IsFooterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
