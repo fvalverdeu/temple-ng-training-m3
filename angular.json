@@ -5,11 +5,15 @@
   "projects": {
     "idstore-web": {
       "projectType": "application",
+<<<<<<< HEAD
+      "schematics": {},
+=======
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
+>>>>>>> develop
       "root": "apps/idstore-web",
       "sourceRoot": "apps/idstore-web/src",
       "prefix": "app",
@@ -28,7 +32,11 @@
               "apps/idstore-web/src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "apps/idstore-web/src/styles.css"
+=======
               "apps/idstore-web/src/styles.scss"
+>>>>>>> develop
             ],
             "scripts": []
           },
@@ -91,7 +99,11 @@
               "apps/idstore-web/src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "apps/idstore-web/src/styles.css"
+=======
               "apps/idstore-web/src/styles.scss"
+>>>>>>> develop
             ],
             "scripts": []
           }
@@ -125,11 +137,15 @@
     },
     "idstore-reports": {
       "projectType": "application",
+<<<<<<< HEAD
+      "schematics": {},
+=======
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
+>>>>>>> develop
       "root": "apps/idstore-reports",
       "sourceRoot": "apps/idstore-reports/src",
       "prefix": "app",
@@ -148,7 +164,11 @@
               "apps/idstore-reports/src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "apps/idstore-reports/src/styles.css"
+=======
               "apps/idstore-reports/src/styles.scss"
+>>>>>>> develop
             ],
             "scripts": []
           },
@@ -211,7 +231,11 @@
               "apps/idstore-reports/src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "apps/idstore-reports/src/styles.css"
+=======
               "apps/idstore-reports/src/styles.scss"
+>>>>>>> develop
             ],
             "scripts": []
           }
