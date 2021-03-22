@@ -18,3 +18,4 @@ WsIdstore: Work space of the project
 8. Luis Cano `feature/sprint0-lcm`
 9. Amadin Ortega Alvarado `feature/sprint0-aoa`
 10. Gustavo Gonzales Fuentes `feature/sprint0-ggf` https://github.com/GGFuentes/Angular_StoreApplication
+11. Claudia Jasmin Dominguez `feature/sprint0-cjt`
