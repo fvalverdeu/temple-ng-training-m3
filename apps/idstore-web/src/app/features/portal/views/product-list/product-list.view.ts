@@ -1,5 +1,6 @@
 import { ProductListPresenter } from './product-list.presenter';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -9,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListView implements OnInit {
 
-  constructor(public presenter: ProductListPresenter) { }
+  constructor(
+    public presenter: ProductListPresenter,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    this.presenter.getProductsByCategory('5fefc649917abb4698b74585');
+    const id = this.route.snapshot.params.id;
+    this.presenter.getProductsByCategory(id);
   }
 
 }

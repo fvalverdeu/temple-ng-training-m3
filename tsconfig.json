@@ -21,9 +21,12 @@
       "@idstore/commons/*": [
         "libs/idstore-commons/src/lib/*"
       ],
-      "idstore-components": [
-        "dist/idstore-components/idstore-components",
-        "dist/idstore-components"
+      // "idstore-components": [
+      //   "dist/idstore-components/idstore-components",
+      //   "dist/idstore-components"
+      // ],
+      "@idstore/ui/*": [
+        "libs/idstore-components/src/lib/*"
       ],
       "my-library": [
         "dist/my-library/my-library",
