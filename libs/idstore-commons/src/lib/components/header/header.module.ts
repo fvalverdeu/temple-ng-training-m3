@@ -5,12 +5,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
-import { IsHeaderComponent } from './header.component';
+import { IdsHeaderComponent } from './header.component';
 
 
 @NgModule({
-  declarations: [IsHeaderComponent],
-  exports: [IsHeaderComponent],
+  declarations: [IdsHeaderComponent],
+  exports: [IdsHeaderComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -19,4 +19,4 @@ import { IsHeaderComponent } from './header.component';
     MatMenuModule
   ]
 })
-export class IsHeaderModule { }
+export class IdsHeaderModule { }

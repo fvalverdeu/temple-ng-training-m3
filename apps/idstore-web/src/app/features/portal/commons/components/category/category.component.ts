@@ -18,6 +18,6 @@ export class CategoryComponent {
   }
 
   goToProducts(): void {
-    this.router.navigateByUrl(`/product/${this.category.id}`);
+    this.router.navigateByUrl(`/portal/product/${this.category.id}`);
   }
 }

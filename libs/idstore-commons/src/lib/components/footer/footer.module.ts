@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IsFooterComponent } from './footer.component';
+import { IdsFooterComponent } from './footer.component';
 
 
 
 @NgModule({
-  declarations: [IsFooterComponent],
-  exports: [IsFooterComponent],
+  declarations: [IdsFooterComponent],
+  exports: [IdsFooterComponent],
   imports: [
     CommonModule
   ]
 })
-export class IsFooterModule { }
+export class IdsFooterModule { }

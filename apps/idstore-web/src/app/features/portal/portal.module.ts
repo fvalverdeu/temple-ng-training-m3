@@ -7,7 +7,7 @@ import { PortalCommonsModule } from './commons/commons.module';
 import { ProductListView } from './views/product-list/product-list.view';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { IscLoaderModule } from 'libs/idstore-components/src/lib/components/atomic/loader/loader.module';
+import { UiLoaderModule } from 'libs/idstore-components/src/lib/components/atomic/loader/loader.module';
 
 @NgModule({
   declarations: [PortalComponent, HomeView, ProductListView],
@@ -16,7 +16,7 @@ import { IscLoaderModule } from 'libs/idstore-components/src/lib/components/atom
     PortalRoutingModule,
     PortalCommonsModule,
     MatDialogModule,
-    IscLoaderModule
+    UiLoaderModule
   ]
 })
 export class PortalModule { }

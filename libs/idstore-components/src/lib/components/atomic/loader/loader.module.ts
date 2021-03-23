@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IscLoaderComponent } from './loader.component';
+import { UiLoaderComponent } from './loader.component';
 
 
 
 @NgModule({
-  declarations: [IscLoaderComponent],
-  exports: [IscLoaderComponent],
+  declarations: [UiLoaderComponent],
+  exports: [UiLoaderComponent],
   imports: [
     CommonModule
   ]
 })
-export class IscLoaderModule { }
+export class UiLoaderModule { }

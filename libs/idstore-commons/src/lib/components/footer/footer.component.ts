@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'is-footer',
+  selector: 'ids-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class IsFooterComponent implements OnInit {
+export class IdsFooterComponent implements OnInit {
 
   constructor() { }
 

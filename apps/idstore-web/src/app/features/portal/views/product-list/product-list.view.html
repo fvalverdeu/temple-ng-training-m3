@@ -1,4 +1,7 @@
 <p>product-list works!</p>
+<h3>Filtros</h3>
+<button (click)="filter()">Filtrar</button>
+
 <ng-container *ngFor="let item of presenter.products">
   <app-product [product]="item"></app-product>
 </ng-container>

@@ -20,4 +20,8 @@ export class ProductListView implements OnInit {
     this.presenter.getProductsByCategory(id);
   }
 
+  filter(): void {
+    this.presenter.filter();
+  }
+
 }

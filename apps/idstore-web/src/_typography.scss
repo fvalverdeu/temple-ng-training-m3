@@ -1,28 +1,28 @@
 @font-face {
-  font-family: "Roboto-Bold";
-  src: url(assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-family: "Montserrat-Bold";
+  src: url(assets/fonts/Montserrat-Bold.ttf) format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto-Medium";
-  src: url(assets/fonts/Roboto-Medium.ttf) format("truetype");
+  font-family: "Montserrat-Medium";
+  src: url(assets/fonts/Montserrat-Medium.ttf) format("truetype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Roboto-Regular";
-  src: url(assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-family: "Montserrat-Regular";
+  src: url(assets/fonts/Montserrat-Regular.ttf) format("truetype");
   font-display: swap;
 }
 
 $fonts-family: (
-  primary-bold: "Roboto-Bold",
-  primary-medium: "Roboto-Medium",
-  primary-regular: "Roboto-Regular"
+  primary-bold: "Montserrat-Bold",
+  primary-medium: "Montserrat-Medium",
+  primary-regular: "Montserrat-Regular"
 );
 
-.is-h1 {
+.ui-h1 {
   font-family: map-get($fonts-family, 'primary-bold');
   font-size: 52px;
   line-height: 56px;

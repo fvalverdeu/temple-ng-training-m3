@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'is-header',
+  selector: 'ids-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class IsHeaderComponent implements OnInit {
+export class IdsHeaderComponent implements OnInit {
 
   constructor() { }
 

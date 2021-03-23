@@ -3,7 +3,7 @@ import { PortalHttp } from './../../commons/http/portal.http';
 import { Injectable } from '@angular/core';
 import { Category } from '../../models/category.model';
 import { MatDialog } from '@angular/material/dialog';
-import { IscLoaderComponent } from 'libs/idstore-components/src/lib/components/atomic/loader/loader.component';
+import { UiLoaderComponent } from 'libs/idstore-components/src/lib/components/atomic/loader/loader.component';
 
 @Injectable()
 export class HomePresenter {
@@ -18,7 +18,7 @@ export class HomePresenter {
   }
 
   getMainCategories(): void {
-    const loading = this.dialog.open(IscLoaderComponent, {
+    const loading = this.dialog.open(UiLoaderComponent, {
       disableClose: true
     });
     this.http.getMainCategories().subscribe(response => {

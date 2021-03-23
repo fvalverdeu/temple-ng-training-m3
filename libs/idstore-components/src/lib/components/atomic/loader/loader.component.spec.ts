@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IscLoaderComponent } from './loader.component';
+import { UiLoaderComponent } from './loader.component';
 
-describe('IscLoaderComponent', () => {
-  let component: IscLoaderComponent;
-  let fixture: ComponentFixture<IscLoaderComponent>;
+describe('UiLoaderComponent', () => {
+  let component: UiLoaderComponent;
+  let fixture: ComponentFixture<UiLoaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IscLoaderComponent ]
+      declarations: [ UiLoaderComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IscLoaderComponent);
+    fixture = TestBed.createComponent(UiLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
