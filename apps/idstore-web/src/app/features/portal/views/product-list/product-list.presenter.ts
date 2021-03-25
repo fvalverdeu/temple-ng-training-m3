@@ -11,23 +11,33 @@ export class ProductListPresenter {
   products: Product[];
   categories: Category[];
   makers: Maker[];
-  // request: IProductRequest;
+  request: IProductRequest;
 
   constructor(private http: PortalHttp) {
     this.products = [];
     this.categories = [];
     this.makers = [];
+    this.request = {
+      name: '',
+      sku: '',
+      category: '',
+      price: null,
+      maker: '',
+      sort: ''
+    }
   }
 
   getMainCategories(): void {
     this.http.getMainCategories().subscribe(response => {
       this.categories = response.map(item => new Category(item));
+      console.log(this.categories)
     }, error => console.log(error));
   }
 
   getMakers(): void {
     this.http.getMakers().subscribe(response => {
       this.makers = response.map(item => new Maker(item));
+      console.log(this.makers)
     }, error => console.log(error));
   }
 
@@ -43,21 +53,40 @@ export class ProductListPresenter {
   }
 
   filter(): void {
-    const request: IProductRequest = {
-      name: '',
-      sku: '',
-      category: '',
-      price: null,
-      maker: '',
-      sort: ''
-    }
-    this.http.getProductsFilter(20,0, request).subscribe(response => {
+    this.http.getProductsFilter(20,0, this.request).subscribe(response => {
       this.products = response.map(item => new Product(item));
     })
   }
 
-  // setCategoryFilter(category: string) {
-  //   this.request.category = cage
-  // }
+  setCategoryFilter(idCategory: string) {
+    this.request.category = idCategory;
+    this.filter();
+  }
+
+  setPriceFilter(option: number) {
+    switch (option) {
+      case 0:
+        this.request.price = { minPrice: 0, maxPrice: 50 };
+        break;
+      case 1:
+        this.request.price = { minPrice: 50, maxPrice: 200 };
+        break;
+      case 2:
+        this.request.price = { minPrice: 200, maxPrice: 500 };
+        break;
+      case 2:
+        this.request.price = { minPrice: 500, maxPrice: 5000 };
+        break;
+      default:
+        this.request.price = { minPrice: 0, maxPrice: 5000 };
+        break;
+    }
+    this.filter();
+  }
+
+  setMakerFilter(idMaker: string) {
+    this.request.maker = idMaker;
+    this.filter();
+  }
 
 }
