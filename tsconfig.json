@@ -12,13 +12,6 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-<<<<<<< HEAD
-      "idstore-commons": [
-        "dist/idstore-commons/idstore-commons",
-        "dist/idstore-commons",
-        "dist/idstore-commons/idstore-commons",
-        "dist/idstore-commons"
-=======
       // "idstore-commons": [
       //   "dist/idstore-commons/idstore-commons",
       //   "dist/idstore-commons",
@@ -27,11 +20,13 @@
       // ],
       "@idstore/commons/*": [
         "libs/idstore-commons/src/lib/*"
->>>>>>> develop
       ],
-      "idstore-components": [
-        "dist/idstore-components/idstore-components",
-        "dist/idstore-components"
+      // "idstore-components": [
+      //   "dist/idstore-components/idstore-components",
+      //   "dist/idstore-components"
+      // ],
+      "@idstore/ui/*": [
+        "libs/idstore-components/src/lib/*"
       ],
       "my-library": [
         "dist/my-library/my-library",

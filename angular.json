@@ -3,6 +3,326 @@
   "version": 1,
   "newProjectRoot": "libs",
   "projects": {
+    "idstore-web": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/idstore-web",
+      "sourceRoot": "apps/idstore-web/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/idstore-web",
+            "index": "apps/idstore-web/src/index.html",
+            "main": "apps/idstore-web/src/main.ts",
+            "polyfills": "apps/idstore-web/src/polyfills.ts",
+            "tsConfig": "apps/idstore-web/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/idstore-web/src/favicon.ico",
+              "apps/idstore-web/src/assets"
+            ],
+            "styles": [
+              "apps/idstore-web/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/idstore-web/src/environments/environment.ts",
+                  "with": "apps/idstore-web/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "idstore-web:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "idstore-web:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "idstore-web:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/idstore-web/src/test.ts",
+            "polyfills": "apps/idstore-web/src/polyfills.ts",
+            "tsConfig": "apps/idstore-web/tsconfig.spec.json",
+            "karmaConfig": "apps/idstore-web/karma.conf.js",
+            "assets": [
+              "apps/idstore-web/src/favicon.ico",
+              "apps/idstore-web/src/assets"
+            ],
+            "styles": [
+              "apps/idstore-web/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/idstore-web/tsconfig.app.json",
+              "apps/idstore-web/tsconfig.spec.json",
+              "apps/idstore-web/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/idstore-web/e2e/protractor.conf.js",
+            "devServerTarget": "idstore-web:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "idstore-web:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "idstore-reports": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/idstore-reports",
+      "sourceRoot": "apps/idstore-reports/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/idstore-reports",
+            "index": "apps/idstore-reports/src/index.html",
+            "main": "apps/idstore-reports/src/main.ts",
+            "polyfills": "apps/idstore-reports/src/polyfills.ts",
+            "tsConfig": "apps/idstore-reports/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/idstore-reports/src/favicon.ico",
+              "apps/idstore-reports/src/assets"
+            ],
+            "styles": [
+              "apps/idstore-reports/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/idstore-reports/src/environments/environment.ts",
+                  "with": "apps/idstore-reports/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "idstore-reports:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "idstore-reports:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "idstore-reports:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/idstore-reports/src/test.ts",
+            "polyfills": "apps/idstore-reports/src/polyfills.ts",
+            "tsConfig": "apps/idstore-reports/tsconfig.spec.json",
+            "karmaConfig": "apps/idstore-reports/karma.conf.js",
+            "assets": [
+              "apps/idstore-reports/src/favicon.ico",
+              "apps/idstore-reports/src/assets"
+            ],
+            "styles": [
+              "apps/idstore-reports/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/idstore-reports/tsconfig.app.json",
+              "apps/idstore-reports/tsconfig.spec.json",
+              "apps/idstore-reports/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "apps/idstore-reports/e2e/protractor.conf.js",
+            "devServerTarget": "idstore-reports:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "idstore-reports:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "idstore-commons": {
+      "projectType": "library",
+      "root": "libs/idstore-commons",
+      "sourceRoot": "libs/idstore-commons/src",
+      "prefix": "ids",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/idstore-commons/tsconfig.lib.json",
+            "project": "libs/idstore-commons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/idstore-commons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/idstore-commons/src/test.ts",
+            "tsConfig": "libs/idstore-commons/tsconfig.spec.json",
+            "karmaConfig": "libs/idstore-commons/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/idstore-commons/tsconfig.lib.json",
+              "libs/idstore-commons/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "idstore-components": {
+      "projectType": "library",
+      "root": "libs/idstore-components",
+      "sourceRoot": "libs/idstore-components/src",
+      "prefix": "ui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "libs/idstore-components/tsconfig.lib.json",
+            "project": "libs/idstore-components/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/idstore-components/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/idstore-components/src/test.ts",
+            "tsConfig": "libs/idstore-components/tsconfig.spec.json",
+            "karmaConfig": "libs/idstore-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/idstore-components/tsconfig.lib.json",
+              "libs/idstore-components/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
   },
-  "defaultProject": "idstore-web"
+  "defaultProject": "idstore-commons"
 }

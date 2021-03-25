@@ -8,7 +8,7 @@ WsIdstore: Work space of the project
 
 # Colaborators:
 
-1. Fernando Valverde `feature/sprint0-fvu`
+1. Fernando Valverde `feature/sprint0-fvu` https://github.com/fvalverdeu/monorepo-test
 2. Wilson Xicará `feature/sprint0-wil` -> Repositorio monorepo de ejemplo: https://github.com/WilsonXicara/monorepo-shoe-store-ng11 (rama [develop](https://github.com/WilsonXicara/monorepo-shoe-store-ng11/tree/develop "Shoe Store monorepo"))
 3. Pepe Flores Huañacari `feature/sprint0-pfh` -> Repositorio monorepo : https://github.com/PFLORE/monorepo-pastry
 4. Joel Ronceros Cordova `feature/sprint0-jrc`
