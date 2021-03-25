@@ -15,18 +15,29 @@
       <hr>
       <ul>
         <li class="filter-item">
-          Categoría <span>+</span>
-          <ul>
+          Categoría <span (click)="showCategory = !showCategory">+</span>
+          <ul *ngIf="showCategory">
             <ng-container *ngFor="let item of presenter.categories">
-              <li class="filter-subitem">{{ item.title }}</li>
+              <li class="filter-subitem" (click)="presenter.setCategoryFilter(item.id)">{{ item.title }}</li>
             </ng-container>
           </ul>
         </li>
         <li class="filter-item">
-          Precio <span>+</span>
+          Precio <span (click)="showPrice = !showPrice">+</span>
+          <ul *ngIf="showPrice">
+            <li class="filter-subitem" (click)="presenter.setPriceFilter(0)">Hasta S/ 50.00</li>
+            <li class="filter-subitem" (click)="presenter.setPriceFilter(1)">S/ 50.00 - S/ 200.00</li>
+            <li class="filter-subitem" (click)="presenter.setPriceFilter(2)">S/ 200.00 - S/ 500.00</li>
+            <li class="filter-subitem" (click)="presenter.setPriceFilter(3)">Más de S/ 500.00</li>
+          </ul>
         </li>
         <li class="filter-item">
-          Fabricante <span>+</span>
+          Fabricante <span (click)="showMaker = !showMaker">+</span>
+          <ul *ngIf="showMaker">
+            <ng-container *ngFor="let item of presenter.makers">
+              <li class="filter-subitem" (click)="presenter.setMakerFilter(item.id)">{{ item.name }}</li>
+            </ng-container>
+          </ul>
         </li>
       </ul>
     </div>
