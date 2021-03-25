@@ -7,7 +7,8 @@ import { PortalCommonsModule } from './commons/commons.module';
 import { ProductListView } from './views/product-list/product-list.view';
 
 import { MatDialogModule } from '@angular/material/dialog';
-import { UiLoaderModule } from 'libs/idstore-components/src/lib/components/atomic/loader/loader.module';
+import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.module';
+import { UiLoaderModule } from '@idstore/ui/components/atomic/loader/loader.module';
 
 @NgModule({
   declarations: [PortalComponent, HomeView, ProductListView],
@@ -16,7 +17,8 @@ import { UiLoaderModule } from 'libs/idstore-components/src/lib/components/atomi
     PortalRoutingModule,
     PortalCommonsModule,
     MatDialogModule,
-    UiLoaderModule
+    UiLoaderModule,
+    IdsLayoutModule
   ]
 })
 export class PortalModule { }

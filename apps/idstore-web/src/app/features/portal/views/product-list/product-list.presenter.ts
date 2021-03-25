@@ -9,21 +9,34 @@ import { IProductRequest } from '../../interfaces/product.interface';
 export class ProductListPresenter {
 
   products: Product[];
+  categories: Category[];
   // request: IProductRequest;
 
   constructor(private http: PortalHttp) {
     this.products = [];
+    this.categories = [];
+  }
+
+  getMainCategories(): void {
+    this.http.getMainCategories().subscribe(response => {
+      this.categories = response.map(item => new Category(item));
+    }, error => console.log(error));
   }
 
   getProductsByCategory(idCategory: string): void {
-    this.http.getProductsByCategory(idCategory).subscribe(response => {
-      this.products = response.map(item => new Product(item));
-    }, error => console.log(error));
+    if (idCategory === '0') {
+      this.filter();
+    } else {
+      this.http.getProductsByCategory(idCategory).subscribe(response => {
+        this.products = response.map(item => new Product(item));
+        console.log(this.products)
+      }, error => console.log(error));
+    }
   }
 
   filter(): void {
     const request: IProductRequest = {
-      name: 'alc',
+      name: '',
       sku: '',
       category: '',
       price: null,

@@ -1,7 +1,45 @@
-<p>product-list works!</p>
-<h3>Filtros</h3>
-<button (click)="filter()">Filtrar</button>
+<h1 class="font-medium ui-title">Productos</h1>
+<div class="grid grid-cols-4">
+  <div class="options">
+    <div class="sort font-regular">
+      <h2 class="font-regular">Ordenar</h2>
+      <hr>
+      <select name="" id="">
+        <option value="none">Seleccione</option>
+        <option value="asc">Menor precio primero</option>
+        <option value="asc">Mayor precio primero</option>
+      </select>
+    </div>
+    <div class="filter font-regular">
+      <h2 class="">Filtrar</h2>
+      <hr>
+      <ul>
+        <li class="filter-item">
+          Categoría <span>+</span>
+          <ul>
+            <ng-container *ngFor="let item of presenter.categories">
+              <li class="filter-subitem">{{ item.title }}</li>
+            </ng-container>
+          </ul>
+        </li>
+        <li class="filter-item">
+          Precio <span>+</span>
+        </li>
+        <li class="filter-item">
+          Fabricante <span>+</span>
+        </li>
+      </ul>
+    </div>
 
-<ng-container *ngFor="let item of presenter.products">
-  <app-product [product]="item"></app-product>
-</ng-container>
+    <h3>Filtros</h3>
+    <button (click)="filter()">Filtrar</button>
+  </div>
+
+  <div class="col-span-3 grid grid-cols-3 gap-x-24 gap-y-20">
+    <ng-container *ngFor="let item of presenter.products">
+      <div class="product">
+        <app-product [product]="item"></app-product>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -16,8 +16,10 @@ export class ProductListView implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.params.id;
+    const id = this.route.snapshot.params.id ? this.route.snapshot.params.id : '0';
+    console.log('idroute products', id);
     this.presenter.getProductsByCategory(id);
+    this.presenter.getMainCategories();
   }
 
   filter(): void {

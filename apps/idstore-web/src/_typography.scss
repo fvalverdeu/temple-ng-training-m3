@@ -28,3 +28,9 @@ $fonts-family: (
   line-height: 56px;
   font-weight: 500;
 }
+
+.ui-title {
+  font-family: map-get($fonts-family, 'primary-medium');
+  font-size: 28px;
+}
+

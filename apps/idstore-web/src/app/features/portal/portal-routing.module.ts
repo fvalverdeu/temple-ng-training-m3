@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', component: PortalComponent,
     children: [
       { path: 'home', component: HomeView },
-      { path: 'product/:id', component: ProductListView }
+      { path: 'product/:id', component: ProductListView },
+      { path: 'product', component: ProductListView }
     ]
   }
 ]
