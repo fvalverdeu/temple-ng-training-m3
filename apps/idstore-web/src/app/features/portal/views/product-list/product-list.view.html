@@ -27,6 +27,11 @@
         </li>
         <li class="filter-item">
           Fabricante <span>+</span>
+          <ul>
+            <ng-container *ngFor="let item of presenter.makers">
+              <li class="filter-subitem">{{ item.name }}</li>
+            </ng-container>
+          </ul>
         </li>
       </ul>
     </div>

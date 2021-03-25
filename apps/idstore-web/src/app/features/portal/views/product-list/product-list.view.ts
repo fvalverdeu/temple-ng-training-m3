@@ -20,6 +20,7 @@ export class ProductListView implements OnInit {
     console.log('idroute products', id);
     this.presenter.getProductsByCategory(id);
     this.presenter.getMainCategories();
+    this.presenter.getMakers();
   }
 
   filter(): void {

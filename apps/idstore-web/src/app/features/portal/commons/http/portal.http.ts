@@ -1,9 +1,10 @@
+import { PortalHttpModule } from './http.module';
+import { ICategory } from './../../interfaces/category.interface';
+import { IMaker } from './../../interfaces/maker.interface';
 import { environment } from './../../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ICategory } from '../../interfaces/category.interface';
-import { PortalHttpModule } from './http.module';
 import { IProduct, IProductRequest } from '../../interfaces/product.interface';
 
 @Injectable({
@@ -29,5 +30,10 @@ export class PortalHttp {
   getProductsFilter(limit: number, skip: number, request: IProductRequest): Observable<IProduct[]> {
     const URL = `${this.apiUrl}/product/page/${limit}/${skip}`;
     return this.http.post<IProduct[]>(URL, request);
+  }
+
+  getMakers(): Observable<IMaker[]> {
+    const URL = `${this.apiUrl}/maker`;
+    return this.http.get<IMaker[]>(URL);
   }
 }
