@@ -247,7 +247,11 @@
       "projectType": "library",
       "root": "libs/idstore-commons",
       "sourceRoot": "libs/idstore-commons/src",
+<<<<<<< HEAD
       "prefix": "is",
+=======
+      "prefix": "ids",
+>>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
@@ -287,7 +291,11 @@
       "projectType": "library",
       "root": "libs/idstore-components",
       "sourceRoot": "libs/idstore-components/src",
+<<<<<<< HEAD
       "prefix": "isc",
+=======
+      "prefix": "ui",
+>>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
