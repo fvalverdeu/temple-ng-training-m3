@@ -1,0 +1,10 @@
+<img src="assets/img/banner.png" alt="">
+<section>
+  <ng-container *ngFor="let item of presenter.categories">
+    <div class="category">
+      <app-category [category]="item"></app-category>
+    </div>
+  </ng-container>
+</section>
+
+

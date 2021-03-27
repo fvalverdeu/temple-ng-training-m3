@@ -8,11 +8,19 @@
     ]
   },
   "files": [
+<<<<<<< HEAD
+    "src/test.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
+=======
     "src/test.ts",
     "src/polyfills.ts"
   ],
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
+>>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575
   ]
 }

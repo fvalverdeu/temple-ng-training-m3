@@ -1,0 +1,77 @@
+.ui-container {
+  position: relative;
+}
+
+@include media-breakpoint("mobile") {
+  .ui-container {
+    padding: 0 12px;
+    // background-color: skyblue;
+  }
+}
+
+@include media-breakpoint("tablet") {
+  .ui-container {
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 16px;
+    // background-color: grey;
+  }
+}
+
+@include media-breakpoint("notebook") {
+  .ui-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 20px;
+    // background-color: blue;
+  }
+}
+
+@include media-breakpoint("laptop") {
+  .ui-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px;
+    // background-color: yellow;
+  }
+}
+
+@include media-breakpoint("desktop") {
+  .ui-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 28px;
+    // background-color: red;
+  }
+  .ui-container--xl {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+@include media-breakpoint("large") {
+  .ui-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px;
+    // background-color: red;
+  }
+}
+
+@include media-breakpoint("extra") {
+  .ui-container {
+    width: 1920px;
+    margin: 0 auto;
+    padding: 32px;
+    // background-color: red;
+  }
+}
+
+@include media-breakpoint("full") {
+  .ui-container--full {
+    width: 100%;
+    margin: 0 auto;
+    padding: 32px;
+    background-color: green;
+  }
+}

@@ -1,0 +1,98 @@
+$md-idstoreprimary: (
+    50 : #e2f6ff,
+    100 : #b8e8fe,
+    200 : #88d8fe,
+    300 : #58c8fd,
+    400 : #35bdfc,
+    500 : #11b1fc,
+    600 : #0faafc,
+    700 : #0ca1fb,
+    800 : #0a98fb,
+    900 : #0588fa,
+    A100 : #ffffff,
+    A200 : #eef6ff,
+    A400 : #bbdcff,
+    A700 : #a2cfff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-idstoresecundary: (
+    50 : #e7e9ed,
+    100 : #c2c9d2,
+    200 : #9aa5b5,
+    300 : #728097,
+    400 : #536580,
+    500 : #354a6a,
+    600 : #304362,
+    700 : #283a57,
+    800 : #22324d,
+    900 : #16223c,
+    A100 : #7ba3ff,
+    A200 : #4880ff,
+    A400 : #155cff,
+    A700 : #004cfb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$colors: (
+  primary: #11B1FC,
+  primary-lite: #D7F2FF,
+
+  secondary: #354A6A,
+  secondary-lite: #DFDFDF,
+
+  complementary: #615F5F,
+  complementary-lite: #ABA5A5,
+  complementary-light: #F3F1F1,
+
+  dark: #000000,
+  default: #FFFFFF,
+
+  alert-error: #FF134C,
+
+  high-emphasis: rgba(0, 0, 0, 0.87),
+  medium-emphasis: rgba(0, 0, 0, 0.6),
+  disabled: rgba(0, 0, 0, 0.38),
+);
+
+@each $name, $value in $colors {
+  .ui-text-#{$name} {
+    color: #{$value} !important;
+  }
+  .ui-bg-#{$name} {
+    background-color: #{$value} !important;
+  }
+}
+
+
