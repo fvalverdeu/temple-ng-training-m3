@@ -1,0 +1,64 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "paths": {
+<<<<<<< HEAD:tsconfig.json
+      "idstore-commons": [
+        "dist/idstore-commons/idstore-commons",
+        "dist/idstore-commons"
+      ],
+      "idstore-components": [
+        "dist/idstore-components/idstore-components",
+        "dist/idstore-components"
+      ],
+       
+=======
+      // "idstore-commons": [
+      //   "dist/idstore-commons/idstore-commons",
+      //   "dist/idstore-commons",
+      //   "dist/idstore-commons/idstore-commons",
+      //   "dist/idstore-commons"
+      // ],
+      "@idstore/commons/*": [
+        "libs/idstore-commons/src/lib/*"
+      ],
+      // "idstore-components": [
+      //   "dist/idstore-components/idstore-components",
+      //   "dist/idstore-components"
+      // ],
+      "@idstore/ui/*": [
+        "libs/idstore-components/src/lib/*"
+      ],
+>>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575:tsconfig.json
+      "my-library": [
+        "dist/my-library/my-library",
+        "dist/my-library"
+      ]
+    },
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
