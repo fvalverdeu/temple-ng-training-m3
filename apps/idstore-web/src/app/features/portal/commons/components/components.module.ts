@@ -7,7 +7,9 @@ import { MatCardModule } from '@angular/material/card';
 
 const ANGULAR_MODULES = [CommonModule];
 
-const MATERIAL_MODULES = [MatCardModule];
+const MATERIAL_MODULES = [
+  MatCardModule
+];
 
 const LIBRARY_MODULES = [];
 
