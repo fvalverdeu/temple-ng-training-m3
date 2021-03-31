@@ -39,11 +39,11 @@
             </ng-container>
           </ul>
         </li>
+        <li class="filter-item clear" (click)="clear()">
+          Limpiar Filtros
+        </li>
       </ul>
     </div>
-
-    <h3>Filtros</h3>
-    <button (click)="filter()">Filtrar</button>
   </div>
 
   <div class="col-span-3 grid grid-cols-3 gap-x-24 gap-y-20">
@@ -52,5 +52,20 @@
         <app-product [product]="item"></app-product>
       </div>
     </ng-container>
+  </div>
+  <!-- <mat-paginator
+    [length]="presenter.length"
+    [pageSize]="presenter.pageSize"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="changePage($event)"
+  >
+  </mat-paginator> -->
+  <div class="col-span-2 col-start-3 paginator">
+    <mat-paginator
+      [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+    >
+  </mat-paginator>
   </div>
 </div>
