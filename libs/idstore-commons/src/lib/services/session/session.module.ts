@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
+import { IdsStorageModule } from '../storage/storage.module';
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    IdsStorageModule
   ]
 })
-export class SessionModule { }
+export class IdsSessionModule { }

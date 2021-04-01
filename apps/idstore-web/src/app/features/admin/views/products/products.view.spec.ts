@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdsLayoutComponent } from './layout.component';
+import { ProductsView } from './products.view';
 
-describe('IdsLayoutComponent', () => {
-  let component: IdsLayoutComponent;
-  let fixture: ComponentFixture<IdsLayoutComponent>;
+describe('ProductsView', () => {
+  let component: ProductsView;
+  let fixture: ComponentFixture<ProductsView>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdsLayoutComponent ]
+      declarations: [ ProductsView ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IdsLayoutComponent);
+    fixture = TestBed.createComponent(ProductsView);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

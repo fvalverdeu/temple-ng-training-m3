@@ -1,12 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: []
 })
-export class CryptoModule { }
+export class IdsCryptoModule { }
