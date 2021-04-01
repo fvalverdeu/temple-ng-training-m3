@@ -1,12 +1,9 @@
+import { IdsCryptoModule } from './../crypto/crypto.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
+    IdsCryptoModule
   ]
 })
-export class StorageModule { }
+export class IdsStorageModule { }

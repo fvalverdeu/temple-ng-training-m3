@@ -5,6 +5,7 @@ import { SignInView } from './views/sign-in/sign-in.view';
 import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.module';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthCommonsModule } from './commons/commons.module';
+import { IdsSessionModule } from '@idstore/commons/services/session/session.module';
 
 
 
@@ -14,7 +15,8 @@ import { AuthCommonsModule } from './commons/commons.module';
     CommonModule,
     AuthRoutingModule,
     AuthCommonsModule,
-    IdsLayoutModule
+    IdsLayoutModule,
+    IdsSessionModule
   ]
 })
 export class AuthModule { }
