@@ -1,8 +1,15 @@
 <mat-drawer-container autosize>
 
-  <mat-drawer #drawer mode="side" opened class="mat-elevation-z4">
+  <mat-drawer #drawer mode="side" opened class="mat-elevation-z4 ui-bg-primary">
     <!-- <ids-menu [menuOptions]="menuOptions" ></ids-menu> -->
-    <ng-content select='ids-menu'></ng-content>
+    <div class="profile">
+      <img src="assets/img/avatar.png" alt="">
+      <h2>Fernando Valverde</h2>
+      <h3>Administrador</h3>
+    </div>
+    <div class="menu">
+      <ng-content select='ids-menu'></ng-content>
+    </div>
   </mat-drawer>
 
   <mat-drawer-content>

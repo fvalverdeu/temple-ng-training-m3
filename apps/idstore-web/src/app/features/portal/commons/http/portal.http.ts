@@ -5,7 +5,7 @@ import { environment } from './../../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IProduct, IProductRequest } from '../../interfaces/product.interface';
+import { IProduct, IProductRequest } from '../../../../../../../../libs/idstore-commons/src/lib/interfaces/product.interface';
 
 @Injectable({
   providedIn: PortalHttpModule
@@ -27,10 +27,7 @@ export class PortalHttp {
     return this.http.get<IProduct[]>(URL);
   }
 
-  getProductsFilter(limit: number, skip: number, request: IProductRequest): Observable<IProduct[]> {
-    const URL = `${this.apiUrl}/product/page/${limit}/${skip}`;
-    return this.http.post<IProduct[]>(URL, request);
-  }
+
 
   getMakers(): Observable<IMaker[]> {
     const URL = `${this.apiUrl}/maker`;
