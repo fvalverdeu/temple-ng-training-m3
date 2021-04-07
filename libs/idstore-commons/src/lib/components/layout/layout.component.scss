@@ -29,3 +29,29 @@ mat-toolbar {
 .page-container {
   padding: 20px;
 }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+}
+
+.menu {
+  margin-top: 40px;
+}

@@ -1,10 +1,12 @@
+import { IdsProductHttp } from './../../../../../../../../libs/idstore-commons/src/lib/http/product/product.http';
 import { Maker } from './../../models/maker.model';
 import { Category } from './../../models/category.model';
-import { Product } from './../../models/product.model';
+import { Product } from '../../../../../../../../libs/idstore-commons/src/lib/models/product.model';
 import { PortalHttp } from '../../commons/http/portal.http';
 import { Injectable } from '@angular/core';
-import { IProductRequest } from '../../interfaces/product.interface';
+import { IProductRequest } from '../../../../../../../../libs/idstore-commons/src/lib/interfaces/product.interface';
 import { Subscription } from 'rxjs';
+
 
 @Injectable()
 export class ProductListPresenter {
@@ -19,7 +21,10 @@ export class ProductListPresenter {
   pageSize: number = 10;
   subscription: Subscription
 
-  constructor(private http: PortalHttp) {
+  constructor(
+    private http: PortalHttp,
+    private idsHttp: IdsProductHttp,
+  ) {
     this.products = [];
     this.categories = [];
     this.makers = [];
@@ -60,7 +65,7 @@ export class ProductListPresenter {
   }
 
   filter(): void {
-    this.http.getProductsFilter(this.limit, this.skip, this.request).subscribe(response => {
+    this.idsHttp.getProductsFilter(this.limit, this.skip, this.request).subscribe(response => {
       this.products = response.map(item => new Product(item));
     })
   }

@@ -1,5 +1,5 @@
-import { environment } from './../../../../environments/environment';
-import { IProduct } from './../interfaces/product.interface';
+import { environment } from '../../../../../apps/idstore-web/src/environments/environment';
+import { IProduct } from '../interfaces/product.interface';
 export class Product {
   pathImage:   string;
   _id:         string;
