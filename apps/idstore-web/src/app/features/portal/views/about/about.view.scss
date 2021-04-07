@@ -1,0 +1,354 @@
+body { 
+	margin: 0px; 
+	padding: 0px; 
+	font-family:"Monserrat"; 
+	overflow-x:hidden;
+	flex-wrap: wrap;
+ }
+
+ 
+img { 
+	position: absolute; 
+	display: block; 
+	margin: 0px; 
+	border: none; 
+	padding: 0px; 
+}
+
+
+div { 
+	position: absolute; 
+}
+
+.in-flex {
+  flex: 1;
+  min-width: 250px;
+}
+
+.in-flex:first-child {
+	flex: 2;
+	padding: 25px;
+	margin: 20px;
+	margin-bottom: 0px;
+  }
+  
+  .in-flex div {
+	padding: 25px;
+  }  
+ 
+
+#content-container { 
+	display: block;
+	position: relative; 
+	width: 1440px;  
+	margin-left: auto; 
+	margin-right: auto; 
+ }
+
+#content-container > div{ 
+	position: relative; 
+	top:inherit; 
+}
+
+#page___nosotros_desktop_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1440px;
+	height: 1600px;
+}
+
+#_bg____nosotros_desktop_ek2 {
+	top: 0px;
+	left: 0px;
+	width: 1440px;
+	height: 1600px;
+	background:rgba(255,255,255,1);
+}
+ 
+ 
+ 
+#line_1 {
+	top: 0px;
+	left: 0px;
+	width: 1140px;
+	height: 1px;
+	background:#FFFFFF;
+}
+ 
+
+#frame_1 {
+	top: 144px;
+	left: 150px;
+	width: 1140px;
+	height: 1076px;
+}
+
+#mision {
+	top: 480px;
+	left: 580px;
+	width: 560px;
+	height: 132px;
+}
+
+#lorem1 {
+	top: 44px;
+	left: 0px;
+	width: 569px;
+	height: 101px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+
+
+#misi_n {
+	top: 0px;
+	left: 0px;
+	width: 113px;
+	height: 38px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 20px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#vision {
+	top: 480px;
+	left: 0px;
+	width: 560px;
+	height: 132px;
+}
+
+#lorem2 {
+	top: 44px;
+	left: 0px;
+	width: 569px;
+	height: 101px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+
+
+#visi_n {
+	top: 0px;
+	left: 0px;
+	width: 105px;
+	height: 38px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 20px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#valor_3 {
+	top: 692px;
+	left: 580px;
+	width: 240px;
+	height: 188px;
+}
+
+#lorem3 {
+	top: 56px;
+	left: -3px;
+	width: 249px;
+	height: 145px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: center;
+	color:#615F5F;
+}
+
+
+#line_4 {
+	top: 32px;
+	left: 0px;
+	width: 240px;
+	height: 1px;
+	background:#615F5F;
+}
+
+
+#valor_3_ek1 {
+	top: 0px;
+	left: 92px;
+	width: 90px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#valor_4 {
+	top: 692px;
+	left: 900px;
+	width: 240px;
+	height: 188px;
+}
+
+#lorem4 {
+	top: 56px;
+	left: -3px;
+	width: 249px;
+	height: 145px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: center;
+	color:#615F5F;
+}
+
+
+#line_4_ek1 {
+	top: 32px;
+	left: 0px;
+	width: 240px;
+	height: 1px;
+	background:#615F5F;
+}
+
+
+#valor_4_ek1 {
+	top: 0px;
+	left: 92px;
+	width: 90px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#valor_2 {
+	top: 692px;
+	left: 290px;
+	width: 240px;
+	height: 188px;
+}
+
+#lorem5 {
+	top: 56px;
+	left: -3px;
+	width: 249px;
+	height: 145px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: center;
+	color:#615F5F;
+}
+
+
+#line_3 {
+	top: 32px;
+	left: 0px;
+	width: 240px;
+	height: 1px;
+	background:#615F5F;
+}
+
+
+#valor_2_ek1 {
+	top: 0px;
+	left: 92px;
+	width: 90px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#valor_1 {
+	top: 692px;
+	left: 0px;
+	width: 240px;
+	height: 188px;
+}
+
+#nosotros_ek1 {
+	top: 80px;
+	left: 0px;
+	text-align: left;
+	width: 1140px;
+	height: 320px;
+}
+
+#lorem6 {
+	top: 56px;
+	left: -3px;
+	width: 249px;
+	height: 145px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: center;
+	color:#615F5F;
+}
+
+
+#line_2 {
+	top: 32px;
+	left: 0px;
+	width: 240px;
+	height: 1px;
+	background:#615F5F;
+}
+
+
+#valor_1_ek1 {
+	top: 0px;
+	left: 92px;
+	width: 76px;
+	height: 35px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+ 
+#rectangle_31 {
+	opacity:0.80000001192093;
+	top: 0px;
+	left: 0px;
+	width: 1140px;
+	height: 320px;
+	background:rgba(243,241,241,0.8);
+}
+
+#nosotros_ek2 {
+	top: 32px;
+	left: 677px;
+	width: 121px;
+	height: 46px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 24px;
+	text-align: left;
+	color:#615F5F;
+}
+
+#lorem7 {
+	top: 77px;
+	left: 677px;
+	width: 449px;
+	height: 211px;
+	overflow: hidden;
+	font-family: Montserrat;
+	font-size: 18px;
+	text-align: left;
+	color:#615F5F;
+}
+ 
