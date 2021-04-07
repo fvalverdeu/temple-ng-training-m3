@@ -1,9 +1,12 @@
+import { IdsProductHttp } from './../../../../../../../../libs/idstore-commons/src/lib/http/product/product.http';
 import { Maker } from './../../models/maker.model';
 import { Category } from './../../models/category.model';
-import { Product } from './../../models/product.model';
+import { Product } from '../../../../../../../../libs/idstore-commons/src/lib/models/product.model';
 import { PortalHttp } from '../../commons/http/portal.http';
 import { Injectable } from '@angular/core';
-import { IProductRequest } from '../../interfaces/product.interface';
+import { IProductRequest } from '../../../../../../../../libs/idstore-commons/src/lib/interfaces/product.interface';
+import { Subscription } from 'rxjs';
+
 
 @Injectable()
 export class ProductListPresenter {
@@ -12,8 +15,16 @@ export class ProductListPresenter {
   categories: Category[];
   makers: Maker[];
   request: IProductRequest;
+  limit: number = 10;
+  skip: number = 0;
+  length: number = 18;
+  pageSize: number = 10;
+  subscription: Subscription
 
-  constructor(private http: PortalHttp) {
+  constructor(
+    private http: PortalHttp,
+    private idsHttp: IdsProductHttp,
+  ) {
     this.products = [];
     this.categories = [];
     this.makers = [];
@@ -24,11 +35,12 @@ export class ProductListPresenter {
       price: null,
       maker: '',
       sort: ''
-    }
+    };
+    this.subscription = new Subscription();
   }
 
   getMainCategories(): void {
-    this.http.getMainCategories().subscribe(response => {
+    this.subscription = this.http.getMainCategories().subscribe(response => {
       this.categories = response.map(item => new Category(item));
       console.log(this.categories)
     }, error => console.log(error));
@@ -53,7 +65,7 @@ export class ProductListPresenter {
   }
 
   filter(): void {
-    this.http.getProductsFilter(20,0, this.request).subscribe(response => {
+    this.idsHttp.getProductsFilter(this.limit, this.skip, this.request).subscribe(response => {
       this.products = response.map(item => new Product(item));
     })
   }
@@ -87,6 +99,10 @@ export class ProductListPresenter {
   setMakerFilter(idMaker: string) {
     this.request.maker = idMaker;
     this.filter();
+  }
+
+  unSubscribeAll(): void {
+    this.subscription.unsubscribe();
   }
 
 }

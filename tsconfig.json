@@ -12,15 +12,6 @@
     "declaration": false,
     "downlevelIteration": true,
     "paths": {
-      "idstore-commons": [
-        "dist/idstore-commons/idstore-commons",
-        "dist/idstore-commons"
-      ],
-      "idstore-components": [
-        "dist/idstore-components/idstore-components",
-        "dist/idstore-components"
-      ],
-       
       // "idstore-commons": [
       //   "dist/idstore-commons/idstore-commons",
       //   "dist/idstore-commons",

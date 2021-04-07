@@ -1,5 +1,5 @@
 import { ProductListPresenter } from './product-list.presenter';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -8,11 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./product-list.view.scss'],
   providers: [ProductListPresenter]
 })
-export class ProductListView implements OnInit {
+export class ProductListView implements OnInit, OnDestroy {
 
   showCategory: boolean;
   showPrice: boolean;
   showMaker: boolean;
+  // pageEvent: PageEvent;
 
   constructor(
     public presenter: ProductListPresenter,
@@ -21,6 +22,12 @@ export class ProductListView implements OnInit {
     this.showCategory = false;
     this.showPrice = false;
     this.showMaker = false;
+    // this.pageEvent = {
+    //   length: presenter.length,
+    //   pageIndex: 1,
+    //   pageSize: presenter.pageSize,
+    //   previousPageIndex: undefined
+    // };
   }
 
   ngOnInit(): void {
@@ -33,6 +40,28 @@ export class ProductListView implements OnInit {
 
   filter(): void {
     this.presenter.filter();
+  }
+
+  clear(): void {
+    this.presenter.request = {
+      name: '',
+      sku: '',
+      category: '',
+      price: null,
+      maker: '',
+      sort: ''
+    }
+    this.filter();
+  }
+
+  // changePage(event: PageEvent) {
+  //   this.presenter.limit = event.pageSize;
+  //   this.presenter.skip = (event.pageIndex * event.pageSize);
+  //   this.filter();
+  // }
+
+  ngOnDestroy(): void {
+    this.presenter.unSubscribeAll();
   }
 
 }
