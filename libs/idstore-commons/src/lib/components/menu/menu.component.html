@@ -1,0 +1,13 @@
+<mat-nav-list>
+  <ng-container *ngFor="let option of menuOptions">
+
+    <mat-list-item [routerLink]="option.url" routerLinkActive="active" >
+      <!-- <mat-icon mat-list-icon>{{ option.icon }}</mat-icon> -->
+      <span>{{ option.title }}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+  </ng-container>
+
+
+</mat-nav-list>

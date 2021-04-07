@@ -25,15 +25,8 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-<<<<<<< HEAD
-<<<<<<< HEAD:libs/idstore-commons/karma.conf.js
+
       dir: require('path').join(__dirname, '../../coverage/idstore-commons'),
-=======
-      dir: require('path').join(__dirname, '../../coverage/idstore-components'),
->>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575:libs/idstore-components/karma.conf.js
-=======
-      dir: require('path').join(__dirname, '../../coverage/idstore-commons'),
->>>>>>> 5bb3d3b829a731f26bfb8e88082c853d2f7c8575
       subdir: '.',
       reporters: [
         { type: 'html' },

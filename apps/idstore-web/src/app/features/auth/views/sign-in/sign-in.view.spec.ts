@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IdsLayoutComponent } from './layout.component';
+import { SignInView } from './sign-in.view';
 
-describe('IdsLayoutComponent', () => {
-  let component: IdsLayoutComponent;
-  let fixture: ComponentFixture<IdsLayoutComponent>;
+describe('SignInView', () => {
+  let component: SignInView;
+  let fixture: ComponentFixture<SignInView>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IdsLayoutComponent ]
+      declarations: [ SignInView ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IdsLayoutComponent);
+    fixture = TestBed.createComponent(SignInView);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

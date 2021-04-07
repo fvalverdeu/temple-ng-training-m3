@@ -39,9 +39,19 @@ h1 {
       margin-bottom: 8px;
     }
   }
+  .clear {
+    font-size: 14px;
+    border-bottom: none;
+    background-color: #F3F1F1;
+    text-align: center;
+  }
 }
 
 .product {
   // width: 33%;
   outline: 1px solid red;
+}
+
+.paginator {
+  margin-top: 20px;
 }
