@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ProductConfirmComponent } from './product-confirm/product-confirm.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -26,7 +28,7 @@ const LIBRARY_MODULES = [];
 const COMPONENTS = [ProductTableComponent, ProductFilterComponent];
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, ProductConfirmComponent, ProductFormComponent],
   exports: [...COMPONENTS],
   imports: [
     ...ANGULAR_MODULES,
