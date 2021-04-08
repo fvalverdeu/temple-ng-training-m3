@@ -15,4 +15,5 @@ export class ProductsView implements OnInit {
     this.presenter.getProductsFilter();
   }
 
+
 }
