@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { IFilterProduct } from './../../../interfaces/filter.interface';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-product-filter',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductFilterComponent implements OnInit {
 
-  constructor() { }
+  @Output() filterData: EventEmitter<IFilterProduct> = new EventEmitter<IFilterProduct>();
+  formGroup: FormGroup;
+  constructor(
+    private fb: FormBuilder
+  ) {
+    this.formGroup = this.fb.group({
+      name: '',
+      sku: '',
+      state: ''
+    });
+  }
 
   ngOnInit(): void {
+  }
+
+  filter(): void {
+    console.log('Emitiendo filterData', this.formGroup.value);
+    this.filterData.emit(this.formGroup.value);
   }
 
 }

@@ -1,3 +1,2 @@
-<p>products works!</p>
-<app-product-filter></app-product-filter>
+<app-product-filter (filterData)="presenter.filter($event)"></app-product-filter>
 <app-product-table [productList]="presenter.products"></app-product-table>
