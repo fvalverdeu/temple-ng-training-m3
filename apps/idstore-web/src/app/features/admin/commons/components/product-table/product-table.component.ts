@@ -1,7 +1,9 @@
 import { Product } from '../../../../../../../../../libs/idstore-commons/src/lib/models/product.model';
-import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { IAction } from '../../../interfaces/action.interface';
+import { EAction } from '../../../interfaces/constants/action.enum';
 
 @Component({
   selector: 'app-product-table',
@@ -12,6 +14,7 @@ export class ProductTableComponent implements OnInit, OnChanges, AfterViewInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator | null;
   @Input() productList: Product[] = [];
+  @Output() action: EventEmitter<IAction> = new EventEmitter<IAction>();
   // dataSource: Product[] = [];
   dataSource: MatTableDataSource<Product>;
   displayedColumns: string[];
@@ -42,12 +45,15 @@ export class ProductTableComponent implements OnInit, OnChanges, AfterViewInit {
 
   detail(sku: string): void {
     console.log('detail', sku);
+    this.action.emit({name: EAction.FIND, id: sku});
   }
   update(sku: string): void {
     console.log('update', sku);
+    this.action.emit({name: EAction.UPDATE, id: sku});
   }
   delete(sku: string): void {
     console.log('delete', sku);
+    this.action.emit({name: EAction.DELETE, id: sku});
   }
 
 }

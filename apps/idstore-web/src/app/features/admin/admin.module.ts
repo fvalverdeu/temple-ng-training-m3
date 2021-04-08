@@ -7,11 +7,14 @@ import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.modul
 import { ProductsView } from './views/products/products.view';
 import { IdsMenuModule } from '@idstore/commons/components/menu/menu.module';
 import { AdminCommonsModule } from './commons/commons.module';
+import { ProductCreateView } from './views/product-create/product-create.view';
+import { ProductDetailView } from './views/product-detail/product-detail.view';
+import { ProductUpdateView } from './views/product-update/product-update.view';
 
 
 
 @NgModule({
-  declarations: [AdminComponent, ProductsView],
+  declarations: [AdminComponent, ProductsView, ProductCreateView, ProductDetailView, ProductUpdateView],
   imports: [
     CommonModule,
     AdminRoutingModule,
