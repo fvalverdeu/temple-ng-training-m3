@@ -3,4 +3,5 @@ export interface ICategory {
   title:  string;
   parent: string;
   path:   string;
+  status: string;
 }

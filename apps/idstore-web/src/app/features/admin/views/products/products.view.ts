@@ -28,7 +28,7 @@ export class ProductsView implements OnInit {
         this.router.navigateByUrl('/admin/product-detail');
         break;
       case EAction.UPDATE:
-        this.router.navigateByUrl('/admin/product-update');
+        this.router.navigateByUrl(`/admin/product-update/${event.id}`);
         break;
       case EAction.CREATE:
         this.router.navigateByUrl('/admin/product-create');

@@ -1,1 +1,7 @@
 <p>product-create works!</p>
+<app-product-form
+  [makers]="presenter.makers"
+  [categories]="presenter.categories"
+  (data)="presenter.register($event)"
+>
+</app-product-form>
