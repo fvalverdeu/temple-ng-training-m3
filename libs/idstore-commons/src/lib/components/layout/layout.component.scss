@@ -1,0 +1,57 @@
+// :host {
+//   display: flex;
+
+// }
+
+mat-drawer-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  mat-drawer {
+    width: 250px;
+  }
+}
+
+$header-height: 56px;
+
+mat-toolbar {
+  min-height: $header-height;
+  mat-toolbar-row {
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  h3 {
+    font-size: 1.25rem;
+    color: #ffffff;
+  }
+}
+
+.menu {
+  margin-top: 40px;
+}

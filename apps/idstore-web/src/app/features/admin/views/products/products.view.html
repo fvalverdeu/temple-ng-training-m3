@@ -1,0 +1,7 @@
+<app-product-filter (filterData)="presenter.filter($event)"></app-product-filter>
+<button color="primary" (click)="action(actionCreate)">Agregar producto</button>
+<app-product-table
+  [productList]="presenter.products"
+  (action)="action($event)"
+>
+</app-product-table>
