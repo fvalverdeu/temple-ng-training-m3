@@ -47,9 +47,9 @@ export class ProductTableComponent implements OnInit, OnChanges, AfterViewInit {
     console.log('detail', sku);
     this.action.emit({name: EAction.FIND, id: sku});
   }
-  update(sku: string): void {
-    console.log('update', sku);
-    this.action.emit({name: EAction.UPDATE, id: sku});
+  update(id: string): void {
+    console.log('update', id);
+    this.action.emit({name: EAction.UPDATE, id: id});
   }
   delete(sku: string): void {
     console.log('delete', sku);

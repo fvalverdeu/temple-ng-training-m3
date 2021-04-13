@@ -1,1 +1,59 @@
 <p>product-form works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+  <mat-form-field appearance="outline">
+    <mat-label>SKU</mat-label>
+    <input type="text" formControlName="sku" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input formControlName="name" type="text" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Descripción</mat-label>
+    <input formControlName="description" type="text" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Unidad</mat-label>
+    <input formControlName="unit" type="text" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Expiración</mat-label>
+    <input formControlName="expiration" type="text" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Modelo</mat-label>
+    <input formControlName="model" type="text" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Cantidad</mat-label>
+    <input formControlName="quantity" type="number" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Price</mat-label>
+    <input formControlName="price" type="number" matInput>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Categoría</mat-label>
+    <mat-select formControlName="category">
+      <mat-option *ngFor="let category of categories" [value]="category._id">
+        {{ category.title }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Fabricante</mat-label>
+    <mat-select formControlName="maker">
+      <mat-option *ngFor="let maker of makers" [value]="maker._id">
+        {{ maker.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Estado</mat-label>
+    <input formControlName="status" type="text" matInput [disabled]="true">
+  </mat-form-field>
+
+  <div>
+    <button mat-raised-button type="submit" color="primary">Guardar</button>
+  </div>
+</form>

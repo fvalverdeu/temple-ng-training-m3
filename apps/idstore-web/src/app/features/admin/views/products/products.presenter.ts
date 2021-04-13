@@ -9,7 +9,7 @@ export class ProductsPresenter {
 
   products: Product[] = [];
   request: IProductRequest;
-  limit: number = 20;
+  limit: number = 100;
   skip: number = 0;
   length: number = 18;
   pageSize: number = 20;

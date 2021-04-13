@@ -1,4 +1,3 @@
-import { ICategory } from './../../interfaces/category.interface';
 import { PortalHttp } from './../../commons/http/portal.http';
 import { Injectable } from '@angular/core';
 import { Category } from '../../models/category.model';

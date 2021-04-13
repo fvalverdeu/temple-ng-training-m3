@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductConfirmComponent } from './product-confirm/product-confirm.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { MatSelectModule } from '@angular/material/select';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -20,15 +21,21 @@ const MATERIAL_MODULES = [
   MatTableModule,
   MatInputModule,
   MatButtonModule,
-  MatPaginatorModule
+  MatPaginatorModule,
+  MatSelectModule
 ];
 
 const LIBRARY_MODULES = [];
 
-const COMPONENTS = [ProductTableComponent, ProductFilterComponent];
+const COMPONENTS = [
+  ProductTableComponent,
+  ProductFilterComponent,
+  ProductConfirmComponent,
+  ProductFormComponent
+];
 
 @NgModule({
-  declarations: [...COMPONENTS, ProductConfirmComponent, ProductFormComponent],
+  declarations: [...COMPONENTS],
   exports: [...COMPONENTS],
   imports: [
     ...ANGULAR_MODULES,

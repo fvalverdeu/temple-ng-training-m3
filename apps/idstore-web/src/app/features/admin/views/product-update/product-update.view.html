@@ -1,1 +1,6 @@
 <p>product-update works!</p>
+<app-product-form
+  [makers]="presenter.makers"
+  [categories]="presenter.categories"
+  [product]="presenter.product"
+  (data)="update($event)"></app-product-form>
