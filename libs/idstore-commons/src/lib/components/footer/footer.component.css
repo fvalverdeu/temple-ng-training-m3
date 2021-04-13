@@ -1,17 +1,25 @@
 .container-body{
-
+   
+    align-self: flex-end;
+     width: 100%;
+     padding: 1em;
+     text-align: center;
     background-color: gray
    
 }
 
+ 
+     
    
   .colum1{
 
     display: inline-block;
     padding: 30px;
     color: white;
-
     margin-right: 80px;
+
+
+   
   }  
 
     
@@ -19,17 +27,31 @@
     display: inline-block;
     padding: 30px;
     color: white;
+    margin-right: 80px;
+    
 }
+
 
 .colum3{
     display: inline-block;
     padding: 30px;
     color: white;
+    margin-right: 80px;
+    
+}
+
+
+
+.colum3 ul li{
+    display: inline-block;
+    margin:0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    
 }
     
-#col1{
-    margin-right: 80px;
-}
+
 
 
 #copi{
@@ -38,18 +60,36 @@
     padding: 20px;
 }
 
-
-#row1{
-    margin: auto;
-    max-width: 902px;
+.row1{
+    text-align: left;
 }
-#row2{
-    color: white;
-    text-align: center;
-    padding: 20px;
+.row1 h1{
+    text-align: left;
+    font-size: 22px;
+ 
+    
 }
 
-#row3{
-    margin: auto;
-    max-width: 902px;
+.row2{
+    text-align: left
+}
+
+.row2 h1{
+    text-align: left;
+    font-size: 22px;
+}
+
+.row3{
+    text-align: left;
+    
+}
+.row3 h1{
+    text-align: left;
+    padding: 15px;
+    font-size: 22px;
+}
+
+.What {
+    
+    float:left;
 }
