@@ -1,3 +1,5 @@
+import { IdsProductHttpModule } from './../../../../../../libs/idstore-commons/src/lib/http/product/product.module';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortalComponent } from './portal.component';
@@ -18,7 +20,9 @@ import { UiLoaderModule } from '@idstore/ui/components/atomic/loader/loader.modu
     PortalCommonsModule,
     MatDialogModule,
     UiLoaderModule,
-    IdsLayoutModule
+    IdsLayoutModule,
+    MatPaginatorModule,
+    IdsProductHttpModule
   ]
 })
 export class PortalModule { }

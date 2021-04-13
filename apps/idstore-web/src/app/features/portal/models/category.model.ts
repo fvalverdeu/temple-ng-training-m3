@@ -1,5 +1,5 @@
+import { ICategory } from '@idstore/commons/interfaces/category.interface';
 import { environment } from './../../../../environments/environment';
-import { ICategory } from '../interfaces/category.interface';
 
 // export class Category implements ICategory {
 export class Category {

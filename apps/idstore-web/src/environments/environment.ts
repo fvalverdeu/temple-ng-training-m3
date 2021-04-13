@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api: 'https://api-nodejs-ecommerce-covid.herokuapp.com',
+  api: 'http://localhost:3000',
+  key: 'c3oTLidIazhvLLbPamORQS01itll5AtK'
 };
 
 /*
