@@ -1,1 +1,24 @@
 <p>product-detail works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ presenter.product.name }}</mat-card-title>
+    <mat-card-subtitle>{{ presenter.product.price }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{ presenter.product.image }}" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p>
+      {{ presenter.product.description }}
+    </p>
+    <p>
+      Unidad: {{ presenter.product.unit }}
+    </p>
+    <p>
+      Expiración: {{ presenter.product.expiration }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="goToEdit()">Editar</button>
+    <button mat-button (click)="goToTable()">Regresar</button>
+  </mat-card-actions>
+</mat-card>

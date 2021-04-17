@@ -1,3 +1,6 @@
+import { AdminHttp } from './../../commons/http/admin.http';
+import { ProductConfirmComponent } from './../../commons/components/product-confirm/product-confirm.component';
+import { MatDialog } from '@angular/material/dialog';
 import { IFilterProduct } from './../../interfaces/filter.interface';
 import { IdsProductHttp } from './../../../../../../../../libs/idstore-commons/src/lib/http/product/product.http';
 import { Injectable } from '@angular/core';
@@ -13,7 +16,11 @@ export class ProductsPresenter {
   skip: number = 0;
   length: number = 18;
   pageSize: number = 20;
-  constructor(private idsHttp: IdsProductHttp) {
+  constructor(
+    private idsHttp: IdsProductHttp,
+    private dialog: MatDialog,
+    private adminHttp: AdminHttp
+  ) {
     this.request = {
       name: '',
       sku: '',
@@ -35,5 +42,21 @@ export class ProductsPresenter {
     this.request.sku = filter.sku;
     // this.request.state = filter.state;
     this.getProductsFilter();
+  }
+
+  confirm(id: string): void {
+    if(id) {
+      const modal = this.dialog.open(ProductConfirmComponent, {
+        disableClose: false
+      });
+      modal.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+        if (!result) {
+          this.adminHttp.deleteProduct(id).subscribe(response => {
+            console.log('Producto eliminado');
+          });
+        }
+      });
+    }
   }
 }

@@ -25,13 +25,16 @@ export class ProductsView implements OnInit {
   action(event: IAction): void {
     switch (event.name) {
       case EAction.FIND:
-        this.router.navigateByUrl('/admin/product-detail');
+        this.router.navigateByUrl(`/admin/product-detail/${event.id}`);
         break;
       case EAction.UPDATE:
         this.router.navigateByUrl(`/admin/product-update/${event.id}`);
         break;
       case EAction.CREATE:
         this.router.navigateByUrl('/admin/product-create');
+        break;
+      case EAction.DELETE:
+        this.presenter.confirm(event.id);
         break;
       default:
         break;
