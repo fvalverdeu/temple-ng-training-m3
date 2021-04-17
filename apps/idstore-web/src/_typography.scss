@@ -34,3 +34,8 @@ $fonts-family: (
   font-size: 28px;
 }
 
+.ui-modal {
+  font-family: map-get($fonts-family, 'primary-bold');
+  font-size: 0.85rem;
+}
+

@@ -1,3 +1,4 @@
+import { environment } from './../../../../environments/environment';
 import { IProduct } from '@idstore/commons/interfaces/product.interface';
 
 export class Product {
@@ -13,6 +14,7 @@ export class Product {
   category:    string;
   maker:       string;
   status:      string;
+  image:       string;
 
   constructor(data?: IProduct) {
     this.id = data?._id ? data._id : '';
@@ -27,5 +29,6 @@ export class Product {
     this.category = data?.category ? data.category : '';
     this.status = data?.status ? data.status : '';
     this.maker = data?.maker ? data.maker : '';
+    this.image = data?.images[0] ? `${environment.api}/${data.images[0]}` : '';
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-product-confirm',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductConfirmComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogRef: MatDialogRef<ProductConfirmComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  delete(): void {
+    this.dialogRef.close(false);
+  }
+
+  close(execute = false) {
+    this.dialogRef.close(true);
   }
 
 }

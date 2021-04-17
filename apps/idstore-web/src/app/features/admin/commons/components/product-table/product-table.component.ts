@@ -43,17 +43,17 @@ export class ProductTableComponent implements OnInit, OnChanges, AfterViewInit {
     // this.dataSource.paginator = this.paginator;
   }
 
-  detail(sku: string): void {
-    console.log('detail', sku);
-    this.action.emit({name: EAction.FIND, id: sku});
+  detail(id: string): void {
+    console.log('detail', id);
+    this.action.emit({name: EAction.FIND, id: id});
   }
   update(id: string): void {
     console.log('update', id);
     this.action.emit({name: EAction.UPDATE, id: id});
   }
-  delete(sku: string): void {
-    console.log('delete', sku);
-    this.action.emit({name: EAction.DELETE, id: sku});
+  delete(id: string): void {
+    console.log('delete', id);
+    this.action.emit({name: EAction.DELETE, id: id});
   }
 
 }
