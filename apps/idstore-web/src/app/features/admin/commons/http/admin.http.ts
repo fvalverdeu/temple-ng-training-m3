@@ -47,4 +47,13 @@ export class AdminHttp {
     const URL = `${this.apiUrl}/product/${id}`;
     return this.http.delete<IProduct>(URL);
   }
+
+  updateImage(fileUpload: File, category: string, id: string): Observable<any> {
+    const URL = `${this.apiUrl}/product/${category}/${id}/image`;
+    let formData = new FormData();
+    formData.append('image', fileUpload);
+    formData.append('position', '0');
+    console.log('fileUpload', fileUpload);
+    return this.http.put<any>(URL, formData);
+  }
 }

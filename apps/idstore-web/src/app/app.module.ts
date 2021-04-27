@@ -8,6 +8,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     IdsHeaderModule,
     IdsFooterModule,
     BrowserAnimationsModule,
+    // MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

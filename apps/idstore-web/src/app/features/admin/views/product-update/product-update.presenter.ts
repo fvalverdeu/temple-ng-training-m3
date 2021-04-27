@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs';
 import { ICategory } from '@idstore/commons/interfaces/category.interface';
 import { IMaker } from '@idstore/commons/interfaces/maker.interface';
 import { Product } from '../../models/product.model';
+import { CATEGORIES_LIST } from '@idstore/commons/constants/category.constans';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable()
 export class ProductUpdatePresenter {
@@ -16,6 +18,7 @@ export class ProductUpdatePresenter {
 
   constructor(
     private http: AdminHttp,
+    // private snackBar: MatSnackBar
   ) {
     this.categories = [];
     this.makers = [];
@@ -47,5 +50,15 @@ export class ProductUpdatePresenter {
     this.http.updateProduct(id, data).subscribe(response => {
       console.log('producto actualizado', response);
     })
+  }
+
+  uploadImage(file: File): void {
+    console.log('upload in presenter', file);
+    const category = CATEGORIES_LIST.get(this.product.category);
+    this.http.updateImage(file, category, this.product.id)
+    .subscribe(response => {
+      console.log('imagen actualizada', response);
+      // this.snackBar.open('Imagen actualizada', undefined, { duration: 2000 });
+    }, error => console.log(error));
   }
 }

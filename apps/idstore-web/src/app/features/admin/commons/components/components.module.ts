@@ -1,3 +1,5 @@
+import { MatIconModule } from '@angular/material/icon';
+import { IdsUploadFileModule } from './../../../../../../../../libs/idstore-commons/src/lib/components/upload-file/upload-file.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductTableComponent } from './product-table/product-table.component';
@@ -11,6 +13,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { ProductConfirmComponent } from './product-confirm/product-confirm.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { MatSelectModule } from '@angular/material/select';
+import { ProductImageComponent } from './product-image/product-image.component';
+import { IdsImgPreviewModule } from '@idstore/commons/components/img-preview/img-preview.module';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -22,16 +26,21 @@ const MATERIAL_MODULES = [
   MatInputModule,
   MatButtonModule,
   MatPaginatorModule,
-  MatSelectModule
+  MatSelectModule,
+  MatIconModule
 ];
 
-const LIBRARY_MODULES = [];
+const LIBRARY_MODULES = [
+  IdsUploadFileModule,
+  IdsImgPreviewModule
+];
 
 const COMPONENTS = [
   ProductTableComponent,
   ProductFilterComponent,
   ProductConfirmComponent,
-  ProductFormComponent
+  ProductFormComponent,
+  ProductImageComponent
 ];
 
 @NgModule({
@@ -40,7 +49,7 @@ const COMPONENTS = [
   imports: [
     ...ANGULAR_MODULES,
     ...MATERIAL_MODULES,
-    // ...LIBRARY_MODULES
+    ...LIBRARY_MODULES
   ]
 })
 

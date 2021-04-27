@@ -1,0 +1,5 @@
+<div class="input-file">
+  <p>{{name}}</p>
+  <button mat-raised-button color="primary" (click)="input.click()">Seleccionar archivo</button>
+  <input #input type="file" (change)="uploadFile($event)" accept="image/png, image/jpeg">
+</div>

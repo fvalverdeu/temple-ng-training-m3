@@ -1,4 +1,8 @@
-<p>product-update works!</p>
+<app-product-image
+  (upload)="presenter.uploadImage($event)"
+>
+</app-product-image>
+
 <app-product-form
   [makers]="presenter.makers"
   [categories]="presenter.categories"
