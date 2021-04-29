@@ -1,7 +1,11 @@
-<ids-upload-file [formControl]="fileControl"></ids-upload-file>
-<button mat-raised-button color="primary"
-  (click)="send()"
->
-  <mat-icon>cloud_upload</mat-icon>
-  Cargar Imagen
-</button>
+<ids-img-preview [src]="productImage" [file]="fileControl.value"></ids-img-preview>
+
+<div class="content">
+  <ids-upload-file #upload [formControl]="fileControl"></ids-upload-file>
+  <button mat-raised-button color="primary"
+    (click)="send()"
+  >
+    <mat-icon>cloud_upload</mat-icon>
+    Cargar Imagen
+  </button>
+</div>

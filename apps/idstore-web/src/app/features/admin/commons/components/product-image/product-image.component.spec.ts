@@ -22,4 +22,9 @@ describe('ProductImageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('should create', () => {
+    // expect(component).toBeTruthy();
+    let img = component.productImage;
+    expect(img.length > 0).toBeTruthy();
+  });
 });
