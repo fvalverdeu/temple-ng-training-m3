@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   api: 'http://localhost:3000',
+  // api: 'https://github.com/fvalverdeu/temple-ng-training-m3',
   key: 'c3oTLidIazhvLLbPamORQS01itll5AtK'
 };
 

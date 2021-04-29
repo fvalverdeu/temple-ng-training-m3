@@ -32,17 +32,19 @@ export class ProductCreatePresenter {
   }
 
   getMakers(): void {
-    this.http.getMakers().subscribe(response => {
+    const subscription2 = this.http.getMakers().subscribe(response => {
       this.makers = response;
       console.log(this.makers)
     }, error => console.log(error));
+    this.subscription.add(subscription2);
   }
 
   register(data: IProductFormData): void {
     console.log('registro', data);
-    this.http.registerProduct(data).subscribe(response => {
+    const subscription3 = this.http.registerProduct(data).subscribe(response => {
       console.log(response._id);
     })
+    this.subscription.add(subscription3);
   }
 
 }
