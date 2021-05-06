@@ -26,4 +26,8 @@ export class IdsStorageService {
     }
     return decripted;
   }
+
+  clearAll(): void {
+    localStorage.clear();
+  }
 }
