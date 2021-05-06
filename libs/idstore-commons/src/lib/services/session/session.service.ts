@@ -39,5 +39,8 @@ export class IdsSessionService {
     return false;
   }
 
+  logout(): void {
+    this.storageService.clearAll();
+  }
 
 }
