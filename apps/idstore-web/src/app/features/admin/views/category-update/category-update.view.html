@@ -1,0 +1,7 @@
+<p>category-update works!</p>
+<app-category-form
+  [mainCategories]="presenter.categories"
+  [category]="presenter.category"
+  (data)="update($event)"
+></app-category-form>
+

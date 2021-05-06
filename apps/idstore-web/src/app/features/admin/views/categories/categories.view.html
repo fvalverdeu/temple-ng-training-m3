@@ -1,0 +1,6 @@
+<app-category-filter (filterData)="presenter.filter($event)"></app-category-filter>
+<button color="primary" (click)="action(actionCreate)">Agregar Categoría</button>
+<app-category-table
+  [categoryList]="presenter.categories"
+  (action)="action($event)"
+></app-category-table>

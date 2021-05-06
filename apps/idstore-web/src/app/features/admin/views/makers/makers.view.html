@@ -1,0 +1,7 @@
+<p>makers works!</p>
+<app-maker-filter (filterData)="presenter.filter($event)"></app-maker-filter>
+<button color="primary" (click)="action(actionCreate)">Agregar Categoría</button>
+<app-maker-table
+  [makerList]="presenter.makers"
+  (action)="action($event)"
+></app-maker-table>

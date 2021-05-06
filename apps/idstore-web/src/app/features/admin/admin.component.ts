@@ -10,8 +10,8 @@ export class AdminComponent implements OnInit {
 
   menuOptions: MenuOption[] = [
     { icon: 'inventory-2', title: 'Productos', url: '/admin/products' },
-    { icon: 'inventory-2', title: 'Categorías', url: '/admin/products' },
-    { icon: 'inventory-2', title: 'Fabricantes', url: '/admin/products' }
+    { icon: 'inventory-2', title: 'Categorías', url: '/admin/categories' },
+    { icon: 'inventory-2', title: 'Fabricantes', url: '/admin/makers' }
   ];
 
   constructor() { }

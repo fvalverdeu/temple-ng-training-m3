@@ -4,3 +4,9 @@ export interface IMaker {
   document: string;
   status:   string;
 }
+
+export interface IMakerRequest {
+  name:  string;
+  document: string;
+  status: string;
+}

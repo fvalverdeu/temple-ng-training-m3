@@ -7,6 +7,8 @@ import { IMaker } from '@idstore/commons/interfaces/maker.interface';
 import { ICategory } from '@idstore/commons/interfaces/category.interface';
 import { IProduct } from '@idstore/commons/interfaces/product.interface';
 import { IProductFormData } from '../../interfaces/product-form-data.interface';
+import { ICategoryFormData } from '../../interfaces/category-form-data.interface';
+import { IMakerFormData } from '../../interfaces/maker-form-data';
 
 @Injectable({
   providedIn: AdminHttpModule
@@ -55,5 +57,49 @@ export class AdminHttp {
     formData.append('position', '0');
     console.log('fileUpload', fileUpload);
     return this.http.put<any>(URL, formData);
+  }
+
+
+  /* CATEGORÍA */
+  registerCategory(request: ICategoryFormData): Observable<ICategory> {
+    const URL = `${this.apiUrl}/category`;
+    return this.http.post<ICategory>(URL, request);
+  }
+
+  updateCategory(id: string, request: ICategoryFormData): Observable<ICategory> {
+    const URL = `${this.apiUrl}/category/${id}`;
+    return this.http.put<ICategory>(URL, request);
+  }
+
+  getCategoryById(id: string): Observable<ICategory> {
+    const URL = `${this.apiUrl}/category/${id}`;
+    return this.http.get<ICategory>(URL);
+  }
+
+  deleteCategory(id: string): Observable<ICategory> {
+    const URL = `${this.apiUrl}/category/${id}`;
+    return this.http.delete<ICategory>(URL);
+  }
+
+
+/* FABRICANTE */
+  registerMaker(request: IMakerFormData): Observable<IMaker> {
+    const URL = `${this.apiUrl}/maker`;
+    return this.http.post<IMaker>(URL, request);
+  }
+
+  updateMaker(id: string, request: IMakerFormData): Observable<IMaker> {
+    const URL = `${this.apiUrl}/maker/${id}`;
+    return this.http.put<IMaker>(URL, request);
+  }
+
+  getMakerById(id: string): Observable<IMaker> {
+    const URL = `${this.apiUrl}/maker/${id}`;
+    return this.http.get<IMaker>(URL);
+  }
+
+  deleteMaker(id: string): Observable<IMaker> {
+    const URL = `${this.apiUrl}/maker/${id}`;
+    return this.http.delete<IMaker>(URL);
   }
 }
