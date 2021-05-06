@@ -1,0 +1,29 @@
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+  <div class="grid gap-x-4">
+    <mat-form-field appearance="outline">
+      <mat-label>Título</mat-label>
+      <input type="text" formControlName="title" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Imagen</mat-label>
+      <input formControlName="path" type="text" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Categoría Padre</mat-label>
+      <mat-select formControlName="parent">
+        <mat-option *ngFor="let category of mainCategories" [value]="category._id">
+          {{ category.title }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <input formControlName="status" type="text" matInput [disabled]="true">
+    </mat-form-field>
+  </div>
+
+
+  <div>
+    <button mat-raised-button type="submit" color="primary">Guardar</button>
+  </div>
+</form>

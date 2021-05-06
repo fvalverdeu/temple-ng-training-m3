@@ -1,0 +1,20 @@
+<p>maker-form works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+  <div class="grid gap-x-4">
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre</mat-label>
+      <input type="text" formControlName="title" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Documento</mat-label>
+      <input formControlName="document" type="text" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Estado</mat-label>
+      <input formControlName="status" type="text" matInput [disabled]="true">
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button type="submit" color="primary">Guardar</button>
+  </div>
+</form>

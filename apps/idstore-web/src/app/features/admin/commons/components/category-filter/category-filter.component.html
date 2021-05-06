@@ -1,0 +1,15 @@
+<form [formGroup]="formGroup" class="mat-elevation-z2" (ngSubmit)="filter()">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" formControlName="title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Categoría Padre</mat-label>
+    <input matInput type="text" formControlName="parent">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Estado</mat-label>
+    <input matInput type="text" formControlName="status">
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="ui-text-default">Buscar</button>
+</form>

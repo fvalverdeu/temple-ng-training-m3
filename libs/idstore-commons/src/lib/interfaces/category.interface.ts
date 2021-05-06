@@ -5,3 +5,9 @@ export interface ICategory {
   path:   string;
   status: string;
 }
+
+export interface ICategoryRequest {
+  title:  string;
+  parent: string;
+  status: string;
+}

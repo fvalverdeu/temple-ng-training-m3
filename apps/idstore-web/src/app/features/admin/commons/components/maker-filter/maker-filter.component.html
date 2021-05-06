@@ -1,0 +1,16 @@
+<p>maker-filter works!</p>
+<form [formGroup]="formGroup" class="mat-elevation-z2" (ngSubmit)="filter()">
+  <mat-form-field>
+    <mat-label>Nombre</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Documento</mat-label>
+    <input matInput type="text" formControlName="document">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Estado</mat-label>
+    <input matInput type="text" formControlName="status">
+  </mat-form-field>
+  <button mat-raised-button color="primary" class="ui-text-default">Buscar</button>
+</form>

@@ -15,6 +15,12 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { MatSelectModule } from '@angular/material/select';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { IdsImgPreviewModule } from '@idstore/commons/components/img-preview/img-preview.module';
+import { CategoryTableComponent } from './category-table/category-table.component';
+import { CategoryFormComponent } from './category-form/category-form.component';
+import { CategoryFilterComponent } from './category-filter/category-filter.component';
+import { MakerFormComponent } from './maker-form/maker-form.component';
+import { MakerFilterComponent } from './maker-filter/maker-filter.component';
+import { MakerTableComponent } from './maker-table/maker-table.component';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -40,7 +46,13 @@ const COMPONENTS = [
   ProductFilterComponent,
   ProductConfirmComponent,
   ProductFormComponent,
-  ProductImageComponent
+  ProductImageComponent,
+  CategoryTableComponent,
+  CategoryFormComponent,
+  CategoryFilterComponent,
+  MakerFormComponent,
+  MakerFilterComponent,
+  MakerTableComponent
 ];
 
 @NgModule({
