@@ -1,0 +1,12 @@
+<p>contact works!</p>
+<app-contact-form
+  (dataForm)="presenter.sendData($event)"
+  [dataContact]="presenter.dataContact"
+></app-contact-form>
+
+<google-map [options]="options" width="900px" height="450px">
+  <map-marker
+    [position]="position"
+    [title]="title">
+  </map-marker>
+</google-map>
