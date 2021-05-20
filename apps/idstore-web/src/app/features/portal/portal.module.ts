@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { IdsProductHttpModule } from './../../../../../../libs/idstore-commons/src/lib/http/product/product.module';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { NgModule } from '@angular/core';
@@ -11,9 +12,11 @@ import { ProductListView } from './views/product-list/product-list.view';
 import { MatDialogModule } from '@angular/material/dialog';
 import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.module';
 import { UiLoaderModule } from '@idstore/ui/components/atomic/loader/loader.module';
+import { ContactView } from './views/contact/contact.view';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
-  declarations: [PortalComponent, HomeView, ProductListView],
+  declarations: [PortalComponent, HomeView, ProductListView, ContactView],
   imports: [
     CommonModule,
     PortalRoutingModule,
@@ -22,7 +25,9 @@ import { UiLoaderModule } from '@idstore/ui/components/atomic/loader/loader.modu
     UiLoaderModule,
     IdsLayoutModule,
     MatPaginatorModule,
-    IdsProductHttpModule
+    IdsProductHttpModule,
+    ReactiveFormsModule,
+    GoogleMapsModule
   ]
 })
 export class PortalModule { }

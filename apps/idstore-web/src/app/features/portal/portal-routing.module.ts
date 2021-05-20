@@ -1,3 +1,4 @@
+import { ContactView } from './views/contact/contact.view';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PortalComponent } from './portal.component';
@@ -10,7 +11,8 @@ const routes: Routes = [
     children: [
       { path: 'home', component: HomeView },
       { path: 'product/:id', component: ProductListView },
-      { path: 'product', component: ProductListView }
+      { path: 'product', component: ProductListView },
+      { path: 'contact', component: ContactView },
     ]
   }
 ]

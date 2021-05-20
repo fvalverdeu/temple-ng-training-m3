@@ -1,0 +1,42 @@
+<form [formGroup]="formGroup" (ngSubmit)="send()" class="mat-elevation-z8">
+  <div class="grid grid-cols-3 gap-x-24">
+    <div class="col-span-2 grid grid-cols-2">
+      <mat-form-field appearance="outline" class="">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Ingrese su nombre y apellido" formControlName="name" required/>
+        <mat-icon matSuffix>contacts</mat-icon>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input matInput placeholder="Ingrese su correo" formControlName="email" required/>
+        <mat-icon matSuffix>alternate_email</mat-icon>
+      </mat-form-field>
+     <!-- <mat-form-field appearance="outline">
+        <mat-label>Phone number</mat-label>
+        <input matInput formControlName="phone" required>
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field> -->
+      <mat-form-field appearance="outline" class="col-span-2">
+        <mat-label>Asunto</mat-label>
+        <input matInput placeholder="Asunto" formControlName="subject" required/>
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+       <mat-form-field appearance="outline" class="col-span-2">
+        <mat-label>Mensaje</mat-label>
+        <input matInput   required/>
+        <textarea placeholder="Ingrese el mensaje" formControlName="message" id="" cols="30" rows="5"></textarea>
+        <mat-icon matSuffix>message</mat-icon>
+      </mat-form-field>
+    </div>
+    <div class="data-contact ">
+      <h5>Datos de contacto:</h5>
+      <p>Nombre: {{ dataContact.name }} </p>
+      <p>Cargo:  {{ dataContact.position }} </p>
+      <p>Teléfono:  {{ dataContact.phone }} </p>
+      <p>Correo:  {{ dataContact.email }} </p>
+      <p>Horario de atención:  {{ dataContact.schedule }} </p>
+      <p>Dirección:  {{ dataContact.address.description }} </p>
+    </div>
+  </div>
+  <button mat-raised-button type="submit">Enviar</button>
+</form>
