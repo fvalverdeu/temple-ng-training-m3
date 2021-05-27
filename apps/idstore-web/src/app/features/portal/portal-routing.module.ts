@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PortalComponent } from './portal.component';
 import { HomeView } from './views/home/home.view';
 import { ProductListView } from './views/product-list/product-list.view';
+import { ProductDetailView } from './views/product-detail/product-detail.view';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,6 +13,7 @@ const routes: Routes = [
       { path: 'home', component: HomeView },
       { path: 'product/:id', component: ProductListView },
       { path: 'product', component: ProductListView },
+      { path: 'product-detail/:id', component: ProductDetailView },
       { path: 'contact', component: ContactView },
     ]
   }

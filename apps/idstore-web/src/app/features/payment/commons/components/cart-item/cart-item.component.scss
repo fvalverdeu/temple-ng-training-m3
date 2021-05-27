@@ -1,0 +1,28 @@
+.item-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #949292;
+  height: 120px;
+
+  .item-image {
+    width: 50px;
+    height: 80px;
+  }
+
+  div.data {
+    margin-left: 20px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    width: 120px;
+
+    .data--quantity {
+      margin: 0 16px;
+    }
+
+    .price {
+      color: rgb(136, 136, 135);
+    }
+  }
+}
+

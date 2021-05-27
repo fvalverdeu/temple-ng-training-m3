@@ -19,4 +19,9 @@ export class IdsProductHttp {
     const URL = `${this.apiUrl}/product/page/${limit}/${skip}`;
     return this.http.post<IProduct[]>(URL, request);
   }
+
+  getProductById(id: string): Observable<IProduct> {
+    const URL = `${this.apiUrl}/product/${id}`;
+    return this.http.get<IProduct>(URL);
+  }
 }

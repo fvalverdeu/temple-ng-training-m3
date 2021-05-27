@@ -1,3 +1,4 @@
+import { IdsCartModule } from './../../../../../../libs/idstore-commons/src/lib/services/cart/cart.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IdsProductHttpModule } from './../../../../../../libs/idstore-commons/src/lib/http/product/product.module';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -14,9 +15,10 @@ import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.modul
 import { UiLoaderModule } from '@idstore/ui/components/atomic/loader/loader.module';
 import { ContactView } from './views/contact/contact.view';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { ProductDetailView } from './views/product-detail/product-detail.view';
 
 @NgModule({
-  declarations: [PortalComponent, HomeView, ProductListView, ContactView],
+  declarations: [PortalComponent, HomeView, ProductListView, ContactView, ProductDetailView],
   imports: [
     CommonModule,
     PortalRoutingModule,
@@ -27,7 +29,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatPaginatorModule,
     IdsProductHttpModule,
     ReactiveFormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    IdsCartModule
   ]
 })
 export class PortalModule { }

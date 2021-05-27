@@ -1,0 +1,26 @@
+<div class="content">
+  <div class="product-image">
+    <div class="wrapper">
+      <div class="list">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+    </div>
+    <div class="image-main">
+      <img src="" alt="">
+    </div>
+  </div>
+  <div class="product-data">
+    <h1> {{ presenter.product?.name }} </h1>
+    <p> {{ presenter.product?.sku }} </p>
+    <p><span>{{ presenter.product?.price }}</span></p>
+    <p>{{ presenter.product?.description }}</p>
+
+    <div class="actions">
+      <input type="number" #quantity>
+      <button mat-button-raised (click)="addToCart()">Agregar al Carrito</button>
+      <button mat-button-raised (click)="goToOrder()">Comprar</button>
+    </div>
+  </div>
+</div>

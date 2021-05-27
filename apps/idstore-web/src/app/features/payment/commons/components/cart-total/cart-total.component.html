@@ -1,0 +1,14 @@
+<h1>Monto total</h1>
+
+<p class="data">
+  <strong>Subtotal</strong>
+  <span> {{subTotal | currency}} </span>
+</p>
+<p class="data">
+  <strong>IGV</strong>
+  <span> {{withIgv() | currency}} </span>
+</p>
+<p class="data">
+  <strong>Total</strong>
+  <span> {{total() | currency}} </span>
+</p>

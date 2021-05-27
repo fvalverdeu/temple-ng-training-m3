@@ -1,18 +1,35 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="search-content">
   <img src="assets/img/logo.png" alt="">
-  <span class="example-spacer"></span>
+  <input matInput class="search-product" type="text" placeholder="Buscar Producto">
+  <mat-icon class="search">search</mat-icon>
+  <ng-container *ngIf="!isAuth; else logout">
+    <button mat-button (click)="signIn()">Ingresar</button>
+  </ng-container>
+  <ng-template #logout>
+    <button mat-button (click)="signOut()">Salir</button>
+  </ng-template>
+  <mat-icon class="cart" [matBadge]="badge"
+    matBadgeColor="warn"
+    routerLink="/payment/cart"
+  >
+    shopping_cart
+  </mat-icon>
+</mat-toolbar>
+<mat-toolbar>
   <div class="nav">
-    <button mat-button>Inicio</button>
+    <button mat-button routerLink="/portal/home">Inicio</button>
     <button mat-button>Nosotros</button>
-    <button mat-button [matMenuTriggerFor]="products">Productos</button>
+    <!-- <button mat-button [matMenuTriggerFor]="products">Productos</button>
     <mat-menu #products="matMenu" yPosition="below">
       <button mat-menu-item>Item 1</button>
       <button mat-menu-item>Item 2</button>
-    </mat-menu>
+    </mat-menu> -->
+    <button mat-button routerLink="/portal/product">Productos</button>
     <button mat-button [matMenuTriggerFor]="contact" routerLink="/portal/contact">Contacto</button>
     <mat-menu #contact="matMenu" yPosition="below">
       <button mat-menu-item>Cliente</button>
-      <button mat-menu-item routerLink="/auth">Administrador</button>
+      <button mat-menu-item routerLink="/admin">Administrador</button>
     </mat-menu>
   </div>
 </mat-toolbar>
+

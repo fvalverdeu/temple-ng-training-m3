@@ -1,0 +1,84 @@
+<p>order-detail works!</p>
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+  <mat-card >
+    <mat-card-title>Información Personal</mat-card-title>
+    <mat-card-content>
+      <div class="grid grid-cols-2 gap-x-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Tipo de documento</mat-label>
+          <mat-select formControlName="documentType">
+            <mat-option  value="CE">Carnet de Extranjería</mat-option>
+            <mat-option value="DNI">Documento Nacional de Identidad</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Documento</mat-label>
+          <input matInput type="text" formControlName="document">
+          <mat-icon matSuffix >email</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-span-2">
+          <mat-label>Nombre</mat-label>
+          <input matInput type="text" formControlName="fullName">
+          <mat-icon matSuffix >user</mat-icon>
+          <!-- <mat-error *ngIf="emailError" >{{ emailError }}</mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Correo</mat-label>
+          <input matInput type="email" formControlName="email">
+          <mat-icon matSuffix >email</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Teléfono</mat-label>
+          <input matInput type="phone" formControlName="phone">
+          <mat-icon matSuffix >phone</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card >
+    <mat-card-title>Información de Delivery</mat-card-title>
+    <mat-card-content>
+      <div class="grid grid-cols-2 gap-x-4">
+        <mat-form-field appearance="outline">
+          <mat-label>Direcciones Guardadas</mat-label>
+          <mat-select formControlName="addressType">
+            <mat-option *ngFor="let address of addressList" [value]="address.id">
+              {{ address.value }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha de entrega</mat-label>
+          <input matInput type="date" formControlName="deliveryDate">
+          <mat-icon matSuffix >date</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-span-2">
+          <mat-label>Dirección</mat-label>
+          <input matInput type="text" formControlName="address">
+          <mat-icon matSuffix >address</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="col-span-2">
+          <mat-label>Referencia</mat-label>
+          <!-- <input matInput type="text" formControlName="reference"> -->
+          <textarea matInput cols="30" rows="3" formControlName="reference"></textarea>
+          <mat-icon matSuffix >reference</mat-icon>
+          <!-- <mat-error *ngIf="emailError" >{{ emailError }}</mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre de contacto</mat-label>
+          <input matInput type="text" formControlName="contactName">
+          <mat-icon matSuffix >email</mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Teléfono del contacto</mat-label>
+          <input matInput type="phone" formControlName="contactPhone">
+          <mat-icon matSuffix >phone</mat-icon>
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+
+  </mat-card>
+  <mat-card-actions>
+    <button mat-raised-button type="submit" color="primary">Continuar</button>
+  </mat-card-actions>
+</form>

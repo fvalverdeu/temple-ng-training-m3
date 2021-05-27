@@ -1,3 +1,4 @@
+import { SignUpView } from './views/sign-up/sign-up.view';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: '', component: AuthComponent,
     children: [
       { path: 'sign-in', component: SignInView },
+      { path: 'sign-up', component: SignUpView },
     ]
   }
 ]

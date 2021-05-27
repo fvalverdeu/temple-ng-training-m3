@@ -1,0 +1,18 @@
+<div class="content grid grid-cols-3 gap-x-24">
+  <div class="content-items col-span-2">
+    <ng-container *ngFor="let item of presenter.cart">
+      <app-cart-item
+        [cartItem]="item"
+        (remove)="presenter.remove($event)"
+        (increment)="presenter.increment($event)"
+        (decrement)="presenter.decrement($event)"
+      ></app-cart-item>
+    </ng-container>
+  </div>
+  <div class="content-total">
+    <app-cart-total
+      [subTotal]="presenter.getAmount()"
+    ></app-cart-total>
+  </div>
+</div>
+<button mat-raised-button color="secondary" (click)="payment()">Finalizar Compra</button>

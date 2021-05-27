@@ -1,6 +1,7 @@
+import { Injectable } from '@angular/core';
+import { ICartItem } from '@idstore/commons/interfaces/cart.interface';
 import { IdsCryptoService } from './../crypto/crypto.service';
 import { IdsStorageModule } from './storage.module';
-import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: IdsStorageModule
@@ -8,6 +9,7 @@ import { Injectable } from '@angular/core';
 export class IdsStorageService {
 
   private keyToken = 'tokenLogin';
+  private keyCart = 'cart';
 
   constructor(
     private cryptoService: IdsCryptoService
@@ -25,6 +27,14 @@ export class IdsStorageService {
       decripted = this.cryptoService.decrypt(encripted);
     }
     return decripted;
+  }
+
+  setCart(array: ICartItem[]): void {
+    localStorage.setItem(this.keyCart, JSON.stringify(array));
+  }
+
+  getCart(): ICartItem[] {
+    return JSON.parse(localStorage.getItem(this.keyCart));
   }
 
   clearAll(): void {

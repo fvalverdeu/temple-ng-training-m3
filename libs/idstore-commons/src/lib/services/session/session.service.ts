@@ -23,11 +23,12 @@ export class IdsSessionService {
     this.storageService.setSignInToken(value);
   }
 
-  get user(): IUser | null {
-    let tokenInfo = '';
+  get user(): IUser {
+    // let tokenInfo = '';
     if (this.token.length > 0) {
-      tokenInfo = this.helper.decodeToken(this.token);
-      return JSON.parse(tokenInfo);
+      const tokenInfo: IUser = this.helper.decodeToken(this.token);
+      // return JSON.parse(tokenInfo);
+      return tokenInfo
     }
     return null;
   }
@@ -37,6 +38,11 @@ export class IdsSessionService {
       return !this.helper.isTokenExpired(this.token);
     }
     return false;
+  }
+
+  get role(): string {
+    const user = this.user;
+    return user ? user.rol : '';
   }
 
   logout(): void {

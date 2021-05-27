@@ -1,3 +1,4 @@
+import { IdsProductHttp } from './../../../../../../../../libs/idstore-commons/src/lib/http/product/product.http';
 import { IProductFormData } from './../../interfaces/product-form-data.interface';
 import { Injectable } from '@angular/core';
 import { AdminHttp } from '../../commons/http/admin.http';
@@ -13,13 +14,13 @@ export class ProductDetailPresenter {
   product: Product = new Product();
 
   constructor(
-    private http: AdminHttp,
+    private idsHttp: IdsProductHttp,
   ) {
     this.subscription = new Subscription();
   }
 
   getProduct(id: string): void {
-    this.http.getProductById(id).subscribe(response => {
+    this.idsHttp.getProductById(id).subscribe(response => {
       this.product = new Product(response);
     }, error => console.log(error));
   }

@@ -1,16 +1,29 @@
 :host {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 
   mat-toolbar {
     // background-color: #11B1FC;
     font-size: 20px !important;
     line-height: 24px !important;
     color: #000000 !important;
+    .search-content {
+      align-items: flex-end;
+
+      .cart {
+        cursor: pointer;
+      }
+    }
+    .search-product {
+      width: 400px;
+    }
+    .search {
+      color: #ffffff;
+    }
   }
 
   .nav {
-    float: right !important;
+    display: flex;
+    align-items: flex-end;
   }
 
 }

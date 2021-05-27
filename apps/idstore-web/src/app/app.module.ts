@@ -1,3 +1,5 @@
+import { IdsRoleModule } from './../../../../libs/idstore-commons/src/lib/guards/role/role.module';
+import { IdsCartModule } from './../../../../libs/idstore-commons/src/lib/services/cart/cart.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,7 +23,9 @@ import { IdsAuthenticationModule } from '@idstore/commons/guards/authentication.
     IdsHeaderModule,
     IdsFooterModule,
     BrowserAnimationsModule,
-    IdsAuthenticationModule
+    IdsAuthenticationModule,
+    IdsCartModule,
+    IdsRoleModule
     // MatSnackBarModule
   ],
   providers: [],

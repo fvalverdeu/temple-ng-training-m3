@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ISignInFormData } from '../../../interfaces/sign-in-form-data';
 
 @Component({
@@ -37,7 +38,10 @@ export class SignInFormComponent implements OnInit {
     return null;
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private router: Router
+  ) {
     this.formGroup = this.fb.group({
       email: [ '', [Validators.required, Validators.email] ],
       password: [ '', Validators.required ]
@@ -50,6 +54,10 @@ export class SignInFormComponent implements OnInit {
 
   send() {
     if (this.formGroup.valid) { this.signIn.emit(this.formGroup.value); }
+  }
+
+  goToRegister(): void {
+    this.router.navigateByUrl('/auth/sign-up');
   }
 
 }

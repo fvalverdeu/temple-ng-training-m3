@@ -1,0 +1,14 @@
+<div class="item-content">
+  <div (click)="removeProduct()">
+    <mat-icon>close</mat-icon>
+  </div>
+  <img class="item-image" [src]="cartItem.image" alt="">
+  <div class="data">{{ cartItem.name}}</div>
+  <div class="data price">{{ cartItem.unitPrice | idscurrency}}</div>
+  <div class="data">
+    <mat-icon (click)="incrementProduct()">add</mat-icon>
+    <span class="data--quantity">{{ cartItem.quantity}}</span>
+    <mat-icon (click)="decrementProduct()">remove</mat-icon>
+  </div>
+  <div class="data">{{ cartItem.getSubTotal() | idscurrency }}</div>
+</div>
