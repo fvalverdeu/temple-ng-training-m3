@@ -14,6 +14,7 @@ export class Product {
   category:    string;
   maker:       string;
   status:      string;
+  images: string[];
 
   get expDate(): Date {
     return new Date(this.expiration);
@@ -33,6 +34,7 @@ export class Product {
     this.category = data?.category ? data.category : '';
     this.status = data?.status ? data.status : '';
     this.maker = data?.maker ? data.maker : '';
+    this.images = data?.images ? data.images : [];
   }
 
   getUrlImage(pathImg: string): string {

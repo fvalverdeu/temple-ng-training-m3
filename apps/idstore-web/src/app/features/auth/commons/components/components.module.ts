@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 
 const ANGULAR_MODULES = [
   CommonModule,
@@ -23,7 +24,10 @@ const MATERIAL_MODULES = [
 
 const LIBRARY_MODULES = [];
 
-const COMPONENTS = [SignInFormComponent];
+const COMPONENTS = [
+  SignInFormComponent,
+  SignUpFormComponent
+];
 
 @NgModule({
   declarations: [...COMPONENTS],

@@ -1,3 +1,4 @@
+import { IdsCartModule } from './../../../../../../../../libs/idstore-commons/src/lib/services/cart/cart.module';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -25,7 +26,9 @@ const MATERIAL_MODULES = [
   MatInputModule,
 ];
 
-const LIBRARY_MODULES = [];
+const LIBRARY_MODULES = [
+  IdsCartModule
+];
 
 const COMPONENTS = [
   CategoryComponent,
@@ -39,7 +42,7 @@ const COMPONENTS = [
   imports: [
     ...ANGULAR_MODULES,
     ...MATERIAL_MODULES,
-    // ...LIBRARY_MODULES
+    ...LIBRARY_MODULES
   ]
 })
 export class PortalComponentsModule { }

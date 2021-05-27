@@ -1,0 +1,15 @@
+<p>order works!</p>
+<div class="ui-container content grid grid-cols-5 gap-x-24">
+  <div class="col-span-5 md:col-span-3 gap-x-24">
+    <app-order-detail></app-order-detail>
+  </div>
+  <div class="col-span-5 md:col-span-2 gap-x-24">
+    <app-order-amount
+      [cart]="presenter.cart"
+    ></app-order-amount>
+    <script>paypal.Buttons().render('body');</script>
+    <div #paypal></div>
+  </div>
+</div>
+
+

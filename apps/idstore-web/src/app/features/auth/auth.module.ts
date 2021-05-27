@@ -6,11 +6,12 @@ import { IdsLayoutModule } from '@idstore/commons/components/layout/layout.modul
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthCommonsModule } from './commons/commons.module';
 import { IdsSessionModule } from '@idstore/commons/services/session/session.module';
+import { SignUpView } from './views/sign-up/sign-up.view';
 
 
 
 @NgModule({
-  declarations: [AuthComponent, SignInView],
+  declarations: [AuthComponent, SignInView, SignUpView],
   imports: [
     CommonModule,
     AuthRoutingModule,

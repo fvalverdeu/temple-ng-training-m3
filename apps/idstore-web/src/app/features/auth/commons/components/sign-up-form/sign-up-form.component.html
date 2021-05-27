@@ -1,0 +1,38 @@
+<form [formGroup]="formGroup" (ngSubmit)="send()">
+  <mat-card>
+    <mat-card-title>Registro</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" formControlName="name">
+        <mat-icon matSuffix >user</mat-icon>
+        <!-- <mat-error *ngIf="emailError" >{{ emailError }}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Correo</mat-label>
+        <input matInput type="email" formControlName="email">
+        <mat-icon matSuffix >email</mat-icon>
+        <mat-error *ngIf="emailError" >{{ emailError }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [type]="show ? 'text' : 'password'" formControlName="password">
+        <button type="button" mat-icon-button matSuffix (click)="show = !show">
+          <mat-icon>{{ show ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordError" >{{ passwordError }}</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Verificar contraseña</mat-label>
+        <input matInput [type]="show ? 'text' : 'password'" formControlName="verifyPassword">
+        <button type="button" mat-icon-button matSuffix (click)="show = !show">
+          <mat-icon>{{ show ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        <mat-error *ngIf="passwordError" >{{ passwordError }}</mat-error>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Registrarme</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

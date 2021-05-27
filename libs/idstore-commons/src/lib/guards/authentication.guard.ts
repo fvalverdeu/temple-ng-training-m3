@@ -21,7 +21,11 @@ export class IdsAuthenticationGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       console.log(route);
       console.log(state);
-      return this.sessionService.isAuthenticated || this.router.navigateByUrl('/');
+      // return this.sessionService.isAuthenticated || this.router.navigateByUrl('/');
+      if (!this.sessionService.isAuthenticated) {
+        return state.url.includes('order') ? this.router.navigateByUrl('/auth') : this.router.navigateByUrl('/');
+      }
+      return true;
   }
 
 }

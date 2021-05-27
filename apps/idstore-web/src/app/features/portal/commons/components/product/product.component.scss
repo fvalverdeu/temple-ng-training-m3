@@ -1,0 +1,26 @@
+:host {
+  display: block;
+  position: relative;
+
+  button {
+    position: absolute;
+    left: 32px;
+    width: 160px;
+    height: 36px;
+    opacity: .8;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    &.add-to-cart {
+      top: 100px;
+      background-color: #354a6a;
+      color: #ffffff;
+    }
+    &.go-to-detail {
+      top: 150px;
+      background-color: #DFDFDF;
+      color: #615F5F;
+    }
+  }
+}
