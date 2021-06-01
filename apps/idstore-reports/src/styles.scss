@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import './palette';
+@include mat-core();
+
+$idstore-web-primary: mat-palette($md-idstoreprimary);
+$idstore-web-accent: mat-palette($md-idstoresecundary, A300, A200, A500);
+
+// The warn palette is optional (defaults to red).
+$idstore-web-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$idstore-web-theme: mat-light-theme((
+  color: (
+    primary: $idstore-web-primary,
+    accent: $idstore-web-accent,
+    warn: $idstore-web-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($idstore-web-theme);

@@ -1,0 +1,14 @@
+<p>todo-list works!</p>
+<ul>
+  <li *ngFor="let todo of todos | async">
+    <div class="card">
+      <h3>Código de Tarea</h3>
+      <p>{{ todo.id }}</p>
+      <p>{{ todo.text }}</p>
+      <button (click)="removeTodo(todo.id)">Eliminar</button>
+    </div>
+  </li>
+</ul>
+<div class="error" *ngIf="(todos | async).length == 0">
+  No hay tareas registradas.
+</div>

@@ -1,7 +1,5 @@
 <mat-drawer-container autosize>
-
   <mat-drawer #drawer mode="side" opened class="mat-elevation-z4 ui-bg-primary">
-    <!-- <ids-menu [menuOptions]="menuOptions" ></ids-menu> -->
     <div class="profile">
       <ng-content></ng-content>
     </div>
@@ -9,7 +7,6 @@
       <ng-content select='ids-menu'></ng-content>
     </div>
   </mat-drawer>
-
   <mat-drawer-content>
     <mat-toolbar color="primary" class="mat-elevation-z8">
       <mat-toolbar-row>
@@ -22,12 +19,8 @@
         <button mat-button (click)="logout()">Cerrar Sesión</button>
       </mat-toolbar-row>
     </mat-toolbar>
-
     <div class="page-container">
       <ng-content select='router-outlet'></ng-content>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
-<!-- <div class="container xs:col-4 bg-primary-50 sm:col-4 bg-primary-200 md:col-12 bg-primary-400 lg:bg-primary-600 xl:bg-primary-800 ">
-  <ng-content></ng-content>
-</div> -->

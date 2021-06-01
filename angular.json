@@ -4,7 +4,7 @@
     "analytics": false
   },
   "version": 1,
-  "newProjectRoot": "libs",
+  "newProjectRoot": "apps",
   "projects": {
     "idstore-web": {
       "projectType": "application",
@@ -327,5 +327,5 @@
       }
     }
   },
-  "defaultProject": "idstore-web"
+  "defaultProject": "idstore-reports"
 }
