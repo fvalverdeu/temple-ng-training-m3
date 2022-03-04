@@ -15,13 +15,19 @@ import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
+import { ProductCategoryPage } from './pages/product-category/product-category.page';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductCategoryChartComponent } from './components/product-category-chart/product-category-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoPage,
     TodoFormComponent,
-    TodoListComponent
+    TodoListComponent,
+    ProductCategoryPage,
+    ProductCategoryChartComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,9 @@ import { FormsModule } from '@angular/forms';
     NgxsModule.forRoot([TodosState], {developmentMode: !environment.production}),
     NgxsReduxDevtoolsPluginModule.forRoot({disabled: environment.production}),
     NgxsLoggerPluginModule.forRoot({disabled: environment.production}),
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

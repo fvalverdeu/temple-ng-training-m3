@@ -1,0 +1,8 @@
+<h1 class="title">{{title}}</h1>
+<app-product-category-chart [dataSource]="products"></app-product-category-chart>
+<div class="content">
+  <ng-container *ngFor="let product of products">
+    <p class="name"> {{ product?.name }} </p>
+    <p class="description"> {{ product?.description }} </p>
+  </ng-container>
+</div>
