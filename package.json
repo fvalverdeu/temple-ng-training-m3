@@ -24,7 +24,9 @@
     "@angular/router": "~11.2.0",
     "@auth0/angular-jwt": "^5.0.2",
     "@ngxs/store": "^3.7.2",
+    "chart.js": "^3.3.2",
     "crypto-js": "^4.0.0",
+    "ng2-charts": "^2.4.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
